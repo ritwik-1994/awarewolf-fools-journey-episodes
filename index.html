@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>The Fool's Journey · Episode Boards</title>
+<meta name="description" content="Storyboards and review pages for AwareWolf's 44-episode series The Fool's Journey.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=Alegreya+Sans:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* Layout: one column index. Live episodes as cards, the full 44-episode run as a status strip. */
+:root{--bg:#e7e5de;--surface:#f5f4ef;--ink:#1f2228;--muted:#585b64;--line:#cbc7bb;--accent:#d9a92a;--accent-ink:#80600f;--live:#2c7a4a;
+--display:"IM Fell English","Iowan Old Style",Georgia,serif;--body:"Alegreya Sans","Segoe UI",system-ui,sans-serif;--mono:"IBM Plex Mono",ui-monospace,Menlo,monospace}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#14161a;--surface:#1d2025;--ink:#ecebe5;--muted:#a0a2a9;--line:#33373e;--accent:#e2b43c;--accent-ink:#e8c25e;--live:#5fb884;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#14161a;--surface:#1d2025;--ink:#ecebe5;--muted:#a0a2a9;--line:#33373e;--accent:#e2b43c;--accent-ink:#e8c25e;--live:#5fb884;color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.5;padding-inline:16px;padding-block:40px 64px}
+main{max-width:880px;margin:0 auto;display:grid;gap:34px}
+.eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+h1,h2{font-family:var(--display);font-weight:400;margin:0;text-wrap:balance}
+h1{font-size:clamp(40px,8vw,72px);line-height:1}
+h2{font-size:28px}
+p{margin:0;max-width:66ch;color:var(--muted)}
+a{color:var(--accent-ink)}
+.ep{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:6px 18px;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:16px 18px;text-decoration:none;color:inherit}
+.ep:hover{border-color:var(--ink)}
+.ep .n{font-family:var(--mono);font-size:22px;color:var(--accent-ink)}
+.ep h3{font-family:var(--display);font-weight:400;font-size:26px;margin:0}
+.ep .s{font-size:14px;color:var(--muted)}
+.pill{font-family:var(--mono);font-size:12px;border:1px solid var(--live);color:var(--live);border-radius:4px;padding:3px 8px;white-space:nowrap}
+@media (max-width:520px){.ep{grid-template-columns:auto minmax(0,1fr)}.pill{grid-column:2;justify-self:start}}
+.strip{display:grid;grid-template-columns:repeat(22,minmax(0,1fr));gap:4px}
+.strip span{aspect-ratio:1;border-radius:3px;border:1px solid var(--line);font-family:var(--mono);font-size:10px;display:flex;align-items:center;justify-content:center;color:var(--muted);min-width:0}
+.strip span.on{background:var(--accent);border-color:var(--accent);color:#1f2228}
+@media (max-width:620px){.strip{grid-template-columns:repeat(11,minmax(0,1fr))}}
+.legend{font-size:13px;color:var(--muted)}
+ol{margin:0;padding-left:20px;color:var(--muted);display:grid;gap:6px;max-width:66ch}
+footer{font-size:13px;color:var(--muted);border-top:1px solid var(--line);padding-top:14px}
+</style>
+</head>
+<body>
+<main>
+  <header style="display:grid;gap:12px">
+    <div class="eyebrow">AwareWolf · Episode boards</div>
+    <h1>The Fool's Journey</h1>
+    <p>Storyboards and animatics for the 44-episode series, one folder per episode. Each board is a review draft: shapes stand in for the final characters, and nothing here is a finished episode.</p>
+  </header>
+
+  <section style="display:grid;gap:14px" aria-labelledby="rv">
+    <h2 id="rv">In review</h2>
+    <a class="ep" href="episodes/001/">
+      <span class="n">01</span>
+      <span><h3>Before Dark</h3><span class="s">Level 1 storyboard · board r2 · 38 s animatic</span></span>
+      <span class="pill">Open for feedback</span>
+    </a>
+  </section>
+
+  <section style="display:grid;gap:12px" aria-labelledby="run">
+    <h2 id="run">The full run</h2>
+    <div class="strip" id="strip" aria-label="44 episodes, episode 1 in review"></div>
+    <div class="legend">Gold: board in review. Outline: not started.</div>
+  </section>
+
+  <section style="display:grid;gap:12px" aria-labelledby="how">
+    <h2 id="how">How to give feedback</h2>
+    <ol>
+      <li>Open an episode board and add your name.</li>
+      <li>Watch the animatic, mark each shot Keep, Rework or Discuss, and note what should change.</li>
+      <li>Click Send feedback, then Create on GitHub. Without a GitHub account, click Copy feedback and message it to Ritwik.</li>
+    </ol>
+  </section>
+
+  <footer>Original AwareWolf fiction built on the Rider–Waite–Smith Major Arcana. Trailer: <a href="https://ritwik-1994.github.io/awarewolf-fools-journey/">The Fool's Journey hub</a>.</footer>
+</main>
+<script>
+const s=document.getElementById('strip');
+for(let i=1;i<=44;i++){const e=document.createElement('span');e.textContent=String(i).padStart(2,'0');if(i===1){e.className='on';}s.appendChild(e)}
+</script>
+</body>
+</html>

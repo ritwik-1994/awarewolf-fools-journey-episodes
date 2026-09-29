@@ -1,0 +1,641 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Before Dark Storyboard · The Fool's Journey</title>
+<meta name="description" content="Episode 1 Level 1 storyboard with a playable animatic and review form.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=Alegreya+Sans:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* Layout: a screening-room board. The 9:16 animatic and the live shot sheet share the top; eight shot cards with review controls follow. */
+:root{
+  --bg:#e7e5de; --surface:#f5f4ef; --surface-2:#ecebe4; --ink:#1f2228; --muted:#585b64; --line:#cbc7bb;
+  --accent:#d9a92a; --accent-ink:#80600f; --red:#a3402b;
+  --keep:#2c7a4a; --rework:#a0630c; --discuss:#35649f;
+  --frame:#121419;
+  --display:"IM Fell English","Iowan Old Style",Georgia,serif;
+  --body:"Alegreya Sans","Segoe UI",system-ui,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#14161a; --surface:#1d2025; --surface-2:#23262c; --ink:#ecebe5; --muted:#a0a2a9; --line:#33373e;
+  --accent:#e2b43c; --accent-ink:#e8c25e; --red:#d8735c;
+  --keep:#5fb884; --rework:#e0a24a; --discuss:#7ea6de; --frame:#0b0c0f; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#14161a; --surface:#1d2025; --surface-2:#23262c; --ink:#ecebe5; --muted:#a0a2a9; --line:#33373e;
+  --accent:#e2b43c; --accent-ink:#e8c25e; --red:#d8735c;
+  --keep:#5fb884; --rework:#e0a24a; --discuss:#7ea6de; --frame:#0b0c0f; color-scheme:dark}
+
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.5;padding-inline:16px;padding-block:0 64px}
+.wrap{max-width:1180px;margin:0 auto}
+h1,h2,h3{font-family:var(--display);font-weight:400;text-wrap:balance;margin:0}
+.eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.mono{font-family:var(--mono)}
+button{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+
+/* status bar */
+.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);border-bottom:1px solid var(--line);margin-inline:-16px;padding:10px 16px}
+.bar-in{max-width:1180px;margin:0 auto;display:flex;flex-wrap:wrap;gap:10px 16px;align-items:center}
+.sync{display:flex;align-items:center;gap:8px;font-size:14px;color:var(--muted);min-width:0;flex:1 1 260px}
+.dot{width:9px;height:9px;border-radius:50%;background:var(--muted);flex:none}
+.sync[data-mode="synced"] .dot{background:var(--keep)}
+.sync[data-mode="saving"] .dot{background:var(--accent)}
+.sync[data-mode="local"] .dot,.sync[data-mode="error"] .dot{background:var(--rework)}
+.count{font-family:var(--mono);font-size:13px;color:var(--muted)}
+.btn{border:1px solid var(--line);background:var(--surface);border-radius:6px;padding:7px 12px;cursor:pointer;font-size:14px}
+.btn:hover{border-color:var(--ink)}
+.btn.primary{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+
+/* header */
+header.top{padding-block:28px 18px;display:grid;gap:10px}
+header.top h1{font-size:clamp(40px,7vw,68px);line-height:1}
+.meta{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.chip{font-family:var(--mono);font-size:12px;padding:3px 8px;border-radius:4px;border:1px solid var(--line);color:var(--muted)}
+.chip.warn{border-color:var(--rework);color:var(--rework)}
+.lede{max-width:68ch;color:var(--muted);margin:0}
+
+/* loop steps */
+.loop{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:8px;overflow:hidden;margin-block:8px 28px}
+.loop div{background:var(--surface);padding:12px 14px;font-size:14px;min-width:0}
+.loop b{font-family:var(--mono);font-weight:500;color:var(--accent-ink);margin-right:6px}
+@media (max-width:720px){.loop{grid-template-columns:1fr}}
+
+/* player */
+.stage{display:grid;grid-template-columns:minmax(0,380px) minmax(0,1fr);gap:28px;align-items:start}
+@media (max-width:820px){.stage{grid-template-columns:1fr}}
+.screen{background:var(--frame);border-radius:10px;padding:10px;display:grid;gap:10px;max-width:380px;width:100%;justify-self:center}
+.screen canvas{width:100%;aspect-ratio:9/16;display:block;border-radius:4px;background:#000;max-width:100%}
+.controls{display:flex;gap:8px;align-items:center}
+.controls button{background:#2a2d34;color:#f1efe8;border:0;border-radius:5px;padding:6px 10px;cursor:pointer;font-family:var(--mono);font-size:13px}
+.controls .time{margin-left:auto;font-family:var(--mono);font-size:12px;color:#b9b7ae;font-variant-numeric:tabular-nums}
+.scrub{position:relative;display:flex;height:30px;border-radius:4px;overflow:hidden;cursor:pointer;background:#22252b}
+.scrub .seg{border-right:1px solid #121419;display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:10px;color:#9d9b93;min-width:0;overflow:hidden}
+.scrub .seg.on{background:#353943;color:#f1efe8}
+.scrub .head{position:absolute;top:0;bottom:0;width:2px;background:var(--accent);pointer-events:none}
+
+.sheet{display:grid;gap:14px;min-width:0}
+.sheet h2{font-size:34px;line-height:1.1}
+.sheet .line{font-family:var(--display);font-style:italic;font-size:24px;color:var(--ink)}
+.sheet .line.none{font-style:normal;font-family:var(--body);font-size:15px;color:var(--muted)}
+.kv{display:grid;grid-template-columns:110px minmax(0,1fr);gap:6px 14px;font-size:15px;margin:0}
+.kv dt{font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);padding-top:3px}
+.kv dd{margin:0;min-width:0}
+.note-geo{font-size:13px;color:var(--muted);border-left:3px solid var(--accent);padding-left:10px;max-width:68ch}
+
+/* questions */
+section.block{margin-top:44px;display:grid;gap:14px}
+section.block > h2{font-size:30px}
+.qs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+@media (max-width:720px){.qs{grid-template-columns:1fr}}
+.q{display:grid;gap:6px;min-width:0}
+.q label{font-size:15px}
+textarea{width:100%;min-height:74px;resize:vertical;border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:6px;padding:9px 10px;font:inherit;font-size:15px}
+textarea:focus{border-color:var(--ink);outline:none}
+
+/* shot cards */
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+@media (max-width:900px){.grid{grid-template-columns:1fr}}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:14px;display:grid;grid-template-columns:132px minmax(0,1fr);gap:14px;align-items:start}
+.card[data-verdict="keep"]{box-shadow:inset 3px 0 0 var(--keep)}
+.card[data-verdict="rework"]{box-shadow:inset 3px 0 0 var(--rework)}
+.card[data-verdict="discuss"]{box-shadow:inset 3px 0 0 var(--discuss)}
+@media (max-width:460px){.card{grid-template-columns:96px minmax(0,1fr)}}
+.thumb{display:grid;gap:6px}
+.thumb canvas{width:100%;aspect-ratio:9/16;border-radius:5px;background:#000;display:block;cursor:pointer;max-width:100%}
+.thumb button{font-family:var(--mono);font-size:11px;background:none;border:1px solid var(--line);border-radius:4px;padding:4px;cursor:pointer;color:var(--muted)}
+.body{display:grid;gap:9px;min-width:0}
+.body .hd{display:flex;gap:8px;align-items:baseline;flex-wrap:wrap}
+.body h3{font-size:24px;line-height:1.1}
+.body .quote{font-family:var(--display);font-style:italic;font-size:19px}
+.body .quote.none{font-family:var(--body);font-style:normal;font-size:14px;color:var(--muted)}
+.spk{font-size:13px;color:var(--muted)}
+details{border-top:1px solid var(--line);padding-top:6px}
+summary{cursor:pointer;font-size:13px;font-family:var(--mono);color:var(--muted)}
+details .kv{margin-top:8px;font-size:14px;grid-template-columns:80px minmax(0,1fr)}
+.verdict{display:flex;gap:6px;flex-wrap:wrap}
+.verdict button{border:1px solid var(--line);background:var(--surface-2);border-radius:5px;padding:5px 11px;font-size:14px;cursor:pointer}
+.verdict button[aria-pressed="true"][data-v="keep"]{background:var(--keep);border-color:var(--keep);color:var(--surface)}
+.verdict button[aria-pressed="true"][data-v="rework"]{background:var(--rework);border-color:var(--rework);color:var(--surface)}
+.verdict button[aria-pressed="true"][data-v="discuss"]{background:var(--discuss);border-color:var(--discuss);color:var(--surface)}
+.sugg{background:var(--surface-2);border-radius:6px;padding:9px 10px;font-size:14px;display:grid;gap:7px}
+.sugg .t{font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--accent-ink)}
+.sugg .row{display:flex;gap:6px}
+.sugg button{border:1px solid var(--line);background:var(--surface);border-radius:4px;padding:3px 10px;font-size:13px;cursor:pointer}
+.sugg button[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+
+.log{font-size:14px;color:var(--muted);display:grid;gap:8px;max-width:75ch}
+.log b{color:var(--ink);font-weight:500}
+footer{margin-top:40px;font-size:13px;color:var(--muted);border-top:1px solid var(--line);padding-top:14px;display:grid;gap:4px}
+footer a{color:var(--accent-ink)}
+.back{color:inherit;text-decoration:underline;text-underline-offset:3px}
+.who{display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center;margin-bottom:22px}
+.who label{font-family:var(--mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.who input{flex:1 1 240px;max-width:360px;border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:6px;padding:8px 10px;font:inherit}
+.log a{color:var(--accent-ink)}
+.copybox{width:100%;min-height:160px;font-family:var(--mono);font-size:12px}
+@media (prefers-reduced-motion: reduce){*{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<div class="bar"><div class="bar-in">
+  <div class="sync" id="sync" data-mode="connecting" role="status"><span class="dot"></span><span id="syncText">Notes save in this browser as you type.</span></div>
+  <span class="count" id="count">0 of 8 shots marked</span>
+  <button class="btn" id="copyBtn" type="button">Copy feedback</button>
+  <button class="btn primary" id="sendBtn" type="button">Send feedback</button>
+</div></div>
+
+<div class="wrap">
+<header class="top">
+  <div class="eyebrow"><a class="back" href="../../">The Fool's Journey · all episodes</a> · Episode 01 · Level 1</div>
+  <h1>Before Dark</h1>
+  <div class="meta">
+    <span class="chip" id="revChip">Story v2 · Board r2 · Prototype 1</span>
+    <span class="chip">38 s provisional · 9:16</span>
+    <span class="chip warn">In review · approves no generation</span>
+  </div>
+  <p class="lede">The Fool promises his white dog they will cross before dark. The easy crossing fails, he can't settle on another road while the light goes, and he finally takes one uphill step. Each scene below is a moving blocking prototype: shapes stand in for the approved trailer Fool and dog so you can judge staging, timing and dialogue.</p>
+</header>
+
+<div class="loop" aria-label="How feedback works">
+  <div><b>1</b>Add your name, watch the animatic, then mark each shot Keep, Rework or Discuss.</div>
+  <div><b>2</b>Write what should change. Notes save in this browser, so you can come back later.</div>
+  <div><b>3</b>Click <strong>Send feedback</strong>, then <strong>Create</strong> on GitHub. No GitHub account? Click Copy feedback and message it to Ritwik.</div>
+</div>
+
+<div class="who"><label for="reviewer">Your name</label><input id="reviewer" type="text" autocomplete="name" placeholder="So we know whose notes these are"></div>
+
+<section class="stage" aria-label="Animatic player">
+  <div class="screen">
+    <canvas id="main" width="540" height="960" aria-label="Episode 1 animatic, 38 seconds"></canvas>
+    <div class="scrub" id="scrub" role="slider" tabindex="0" aria-label="Timeline" aria-valuemin="0" aria-valuemax="38" aria-valuenow="0"></div>
+    <div class="controls">
+      <button id="play" type="button">Play</button>
+      <button id="restart" type="button">From start</button>
+      <button id="loopShot" type="button" aria-pressed="false">Loop shot</button>
+      <span class="time" id="time">0.0 / 38.0 s</span>
+    </div>
+  </div>
+  <div class="sheet" id="sheet" aria-live="polite"></div>
+</section>
+
+<section class="block" aria-labelledby="qh">
+  <h2 id="qh">Three questions for this revision</h2>
+  <div class="qs" id="qs"></div>
+</section>
+
+<section class="block" aria-labelledby="sh">
+  <h2 id="sh">Shots</h2>
+  <div class="grid" id="grid"></div>
+</section>
+
+<section class="block" aria-labelledby="lh">
+  <h2 id="lh">Revision log</h2>
+  <div class="log">
+    <div><b>r2 · Prototype 1 (this board).</b> Story unchanged from Before Dark v2. Adds moving scene prototypes for all eight shots, a full 0–38 s animatic, and feedback sent as GitHub issues. Archived at <a href="board-r2.html">board-r2.html</a>.</div>
+    <div><b>r1 · superseded.</b> Far bank with no personal reason to cross, a staff-and-bundle brace puzzle, and the closing line “Tomorrow. One road.”</div>
+  </div>
+</section>
+
+<footer>
+  <div>Blocking prototypes only. Figures are stand-ins, not character art, faces or card designs. Final look follows the approved trailer opening.</div>
+  <div>Source card: <a href="https://commons.wikimedia.org/wiki/File:RWS_Tarot_00_Fool.jpg" target="_blank" rel="noopener">Rider–Waite–Smith, 0 · The Fool</a>. The crossing and dialogue are original AwareWolf fiction.</div>
+</footer>
+</div>
+
+<script>
+(() => {
+const REV = 2;
+const DUR = 38;
+const SHOTS = [
+ {k:'S01',id:'FJ-E01-S01',s:0,e:3,title:'Before dark',
+  framing:'Moving boot-and-plank opening, easing out to his profile. Fool and dog already on the safe near bank.',
+  action:'He tests a surviving plank over the gorge and makes the promise as his boot touches wood. The plank shifts toward the drop. Staff, bundle, rose, feather and patterned tunic read from the first frame; the dog is already beside him.',
+  why:'The promise gives the attempt a personal deadline; the moving plank asks an instant question.',
+  speaker:'The Fool. First words over his moving boot, then his visible profile.',
+  dialogue:'We’ll be over before dark.',
+  sound:'River, foot on wood, a creak under the last word. Music breaks off with the promise.'},
+ {k:'S02',id:'FJ-E01-S02',s:3,e:7,title:'I’m fine',
+  framing:'Continuous pullback from the slipping board to his face and the safe dog.',
+  action:'He catches the rock and steps back. The dog barks once. He checks the dog is beside him, exhales, and says it more to reassure himself than to look brave. Embarrassment softens into a small smile.',
+  why:'A near miss shows warmth and nerves without turning the dog into a rescuer.',
+  speaker:'The Fool, visible mouth.', dialogue:'I’m fine.',
+  sound:'One bark, breath returning, river underneath.'},
+ {k:'S03',id:'FJ-E01-S03',s:7,e:11,title:'Still want to see it',
+  framing:'Near-bank profile of Fool and dog; his eyeline reveals the sunlit far bank.',
+  action:'He looks across. The sight brings his excitement back. He glances at the dog and says the line.',
+  why:'Curiosity survives the setback, so we understand why he doesn’t just go home.',
+  speaker:'The Fool, visible profile.', dialogue:'Still want to see it.',
+  sound:'River drops back a little; a warmer phrase enters under the line.'},
+ {k:'S04',id:'FJ-E01-S04',s:11,e:16,title:'The other ways',
+  framing:'Follow his head turn from the river to the uphill route and the easier near-bank path.',
+  action:'Away from the failed plank, his attention catches on two roads: a winding uphill route and an easier path along the near bank.',
+  why:'The dilemma is in the landscape. No card lecture explains it.',
+  speaker:'No speaker.', dialogue:'',
+  sound:'Wind in grass and the rose; two path textures in the ambience. No voiceover.'},
+ {k:'S05',id:'FJ-E01-S05',s:16,e:21,title:'One step, then back',
+  framing:'Grounded tracking shot. His feet, the dog and both roads stay spatially clear.',
+  action:'He starts uphill, stops when he sees where the other road might lead, and comes back a few steps, trying to look casual. The dog follows his movement but doesn’t choose for him.',
+  why:'His flaw shows as behavior, with a little self-conscious humor.',
+  speaker:'No speaker.', dialogue:'',
+  sound:'Footsteps start, stop, turn and come back; a short musical lift cuts off.'},
+ {k:'S06',id:'FJ-E01-S06',s:21,e:26,title:'The light is going',
+  framing:'Same geography. Dog settling, Fool noticing, sun crossing the ridge, all in motion.',
+  action:'While he studies the options, the sun slips behind the ridge. The dog settles at his feet. He notices the dog, then the light; his face changes before he speaks.',
+  why:'The cost lands through a companion and lost daylight, not an injury.',
+  speaker:'No speaker.', dialogue:'',
+  sound:'Soft dog movement and wind. Music loses its brightness; water continues.'},
+ {k:'S07',id:'FJ-E01-S07',s:26,e:31,title:'The crossing goes',
+  framing:'Fool and dog on safe ground, then the current carrying the plank downstream, then his reaction.',
+  action:'A stronger current takes the loose plank. He reaches from safe ground, then lets it go. The river has changed his options; it hasn’t judged him.',
+  why:'A physical event closes the crossing and points the story at a real road.',
+  speaker:'No speaker.', dialogue:'',
+  sound:'Wood knock, splash, then a brief river-only breath.'},
+ {k:'S08',id:'FJ-E01-S08',s:31,e:38,title:'Come on',
+  framing:'Moving two-shot of Fool and dog, finishing on his first uphill steps with the far bank still visible.',
+  action:'He crouches by the dog; the far bank is dim behind them. “I know.” He stands, shoulders the unchanged bundle and starts uphill. “Come on.” The dog follows. A distant, unplaceable rhythm of work enters on the last step.',
+  why:'A small action and a warmer relationship. Episode 2 asks whether he can keep going.',
+  speaker:'The Fool, visible mouth. The dog stays silent.', dialogue:'I know. … Come on.',
+  sound:'Warm breath, cloth, footsteps onto the uphill route; faint distant work rhythm at the cut.'}
+];
+const SUGG = {
+ S01:'Let the dog stop short of the plank a beat before his boot touches it. It warns the audience early and gives the dog a job without making the decision.',
+ S03:'Show the snapped pilings of an old bridge in the far-bank view, with no comment. It plants the season’s bridge 19 episodes before it becomes the goal.',
+ S06:'Trim this shot by about a second. Five seconds with no line is the likeliest place a first-time viewer swipes away.'
+};
+const QUESTIONS = [
+ {k:'q1',text:'Does the promise to the dog make the Fool’s wish and the missed sunset feel personal?'},
+ {k:'q2',text:'Do his starts, stops and changing eyeline show indecision without a narrator explaining it?'},
+ {k:'q3',text:'Does “I know. Come on.” feel earned, and does it make the next road worth following?'},
+ {k:'other',text:'Anything else about the episode as a whole?'}
+];
+const SUBS = [
+ {a:0.3,b:2.7,t:'We’ll be over before dark.'},
+ {a:5.0,b:6.5,t:'I’m fine.'},
+ {a:8.7,b:10.6,t:'Still want to see it.'},
+ {a:32.0,b:33.3,t:'I know.'},
+ {a:35.0,b:36.5,t:'Come on.'}
+];
+const shotAt = t => SHOTS.find(s => t >= s.s && t < s.e) || SHOTS[SHOTS.length-1];
+
+/* ---------- math ---------- */
+const clamp=(v,a=0,b=1)=>Math.max(a,Math.min(b,v));
+const ease=u=>u<.5?2*u*u:1-Math.pow(-2*u+2,2)/2;
+const seg=(t,a,b)=>ease(clamp((t-a)/(b-a)));
+const lerp=(a,b,u)=>a+(b-a)*u;
+function hex(h){h=h.replace('#','');return [parseInt(h.slice(0,2),16),parseInt(h.slice(2,4),16),parseInt(h.slice(4,6),16)]}
+function mix(a,b,u){const A=hex(a),B=hex(b);return `rgb(${A.map((v,i)=>Math.round(lerp(v,B[i],u))).join(',')})`}
+function poly(pts){let L=[0];for(let i=1;i<pts.length;i++)L.push(L[i-1]+Math.hypot(pts[i][0]-pts[i-1][0],pts[i][1]-pts[i-1][1]));return {pts,L,T:L[L.length-1]}}
+function along(p,u){const d=clamp(u)*p.T;for(let i=1;i<p.pts.length;i++){if(d<=p.L[i]){const k=(d-p.L[i-1])/(p.L[i]-p.L[i-1]);return [lerp(p.pts[i-1][0],p.pts[i][0],k),lerp(p.pts[i-1][1],p.pts[i][1],k)]}}return p.pts[p.pts.length-1].slice()}
+function edgeX(pts,y){for(let i=1;i<pts.length;i++){if(y<=pts[i][1]){const k=(y-pts[i-1][1])/(pts[i][1]-pts[i-1][1]);return lerp(pts[i-1][0],pts[i][0],k)}}return pts[pts.length-1][0]}
+
+/* ---------- world geography (fixed for every shot) ---------- */
+const WW=1080, WH=1920;
+const NEAR_EDGE=[[560,860],[455,1290],[420,1920]];
+const FAR_EDGE=[[600,860],[662,1290],[730,1920]];
+const UP=poly([[378,1312],[300,1228],[262,1128],[206,1040],[150,952]]);
+const ALT=poly([[378,1312],[270,1440],[150,1560],[-20,1690]]);
+const EDGE_SPOT=[428,1300], SAFE=[378,1312];
+
+function light(t){return t<21?1:t<26?lerp(1,.42,seg(t,21,26)):lerp(.42,.3,seg(t,26,38))}
+function sunY(t){return t<21?lerp(520,640,t/21):lerp(640,840,seg(t,21,26))}
+
+function foolAt(t){
+  let x=EDGE_SPOT[0],y=EDGE_SPOT[1],face=1,moving=0,crouch=0,reach=0,step=0,lean=0;
+  if(t<3){step=seg(t,.4,1.3)*(1-seg(t,2.3,3));lean=step*.5}
+  else if(t<4){const u=seg(t,3,4);x=lerp(EDGE_SPOT[0],SAFE[0],u);y=lerp(EDGE_SPOT[1],SAFE[1],u);moving=1;reach=Math.sin(clamp((t-3)/1)*Math.PI)*.7}
+  else if(t<16){[x,y]=SAFE;face=(t>8.6&&t<9.7)?-1:(t>=13.2?-1:1)}
+  else if(t<18){[x,y]=along(UP,lerp(0,.28,seg(t,16,18)));face=-1;moving=1}
+  else if(t<18.8){[x,y]=along(UP,.28);face=t>18.55?1:-1}
+  else if(t<19.9){[x,y]=along(UP,lerp(.28,0,seg(t,18.8,19.9)));face=1;moving=1}
+  else if(t<20.6){[x,y]=along(ALT,lerp(0,.08,seg(t,19.9,20.6)));face=-1;moving=1}
+  else if(t<26.3){[x,y]=along(ALT,.08);face=(t>23.4&&t<24.4)?1:-1}
+  else if(t<31){const a=along(ALT,.08);const u=seg(t,26.3,27.3);x=lerp(a[0],412,u);y=lerp(a[1],1318,u);face=1;moving=t<27.3?1:0;reach=seg(t,27.4,28.3)*(1-seg(t,28.9,30))}
+  else if(t<35){const u=seg(t,31,31.8);x=lerp(412,386,u);y=lerp(1318,1322,u);face=-1;moving=t<31.8?1:0;crouch=seg(t,31.5,32.4)*(1-seg(t,33.6,34.6))}
+  else{[x,y]=along(UP,lerp(0,.34,seg(t,35,38.4)));face=-1;moving=1}
+  const speak=SUBS.some(s=>t>=s.a&&t<=s.b)?1:0;
+  return {x,y,face,moving,crouch,reach,step,lean,speak};
+}
+function dogAt(t){
+  let x=318,y=1336,face=1,lie=0,moving=0;
+  const follow=(tt,off)=>{const f=foolAt(tt);return [f.x-off*f.face,f.y+16,f.face,f.moving]};
+  if(t<16){}
+  else if(t<21.6){const r=follow(t-.7,46);[x,y,face,moving]=r}
+  else if(t<35.4){const a=along(ALT,.08);const b=follow(21.6-.7,46);const u=seg(t,21.6,22.3);x=lerp(b[0],a[0]+30,u);y=lerp(b[1],a[1]+22,u);face=-1;moving=t<22.3?1:0;
+    lie=seg(t,22.3,23.2)*(1-.6*seg(t,26.2,26.8))*(1-seg(t,34.2,34.9));
+    if(t>31){const c=seg(t,31,31.8);x=lerp(x,344,c);y=lerp(y,1334,c);face=1}}
+  else{const r=follow(t-.8,50);[x,y,face,moving]=r}
+  const bark=t>3.45&&t<4.05;
+  return {x,y,face,lie,moving,bark};
+}
+function plankAt(t){
+  let cx=557,cy=1287,a=-.06;
+  const sh=seg(t,1.8,2.6);cx+=sh*10;cy+=sh*6;a+=sh*.14;
+  a+=Math.sin(t*2.6)*.012*(t>2?1:0);
+  if(t>26.3){const u=clamp((t-26.3)/4.4);const ue=u*u*(3-2*u);cy=lerp(1293,2140,ue*ue*.8+ue*.2);
+    cx=(edgeX(NEAR_EDGE,cy)+edgeX(FAR_EDGE,cy))/2;a+=u*2.2;}
+  return {cx,cy,a};
+}
+function camAt(t){
+  const sh=shotAt(t), u=clamp((t-sh.s)/(sh.e-sh.s)), e=ease(u);
+  let c;
+  switch(sh.k){
+   case 'S01':c=[lerp(478,440,e),lerp(1250,1215,e),lerp(3.1,2.2,e)];break;
+   case 'S02':c=[lerp(440,390,e),lerp(1215,1240,e),lerp(2.2,1.55,e)];break;
+   case 'S03':c=[lerp(390,640,e),lerp(1240,1170,e),lerp(1.55,1.2,e)];break;
+   case 'S04':c=[lerp(620,330,e),lerp(1170,1180,e),lerp(1.2,1.0,e)];break;
+   case 'S05':{const f=foolAt(t);c=[f.x+30,f.y-110,1.3];break}
+   case 'S06':c=[lerp(360,340,e),lerp(1150,1050,e),lerp(1.3,1.0,e)];break;
+   case 'S07':{if(t<29.2){const k=seg(t,26,29.2);c=[lerp(520,600,k),lerp(1320,1640,k),1.5]}else{const k=seg(t,29.2,31);c=[lerp(600,410,k),lerp(1640,1250,k),lerp(1.5,1.8,k)]}break}
+   default:{const k=seg(t,31,38);c=[lerp(370,260,k),lerp(1250,1130,k),lerp(1.9,1.3,k)]}
+  }
+  let [x,y,z]=c; z=Math.max(1,z);
+  const hw=WW/2/z, hh=WH/2/z;
+  return [clamp(x,hw,WW-hw),clamp(y,hh,WH-hh),z];
+}
+
+/* ---------- drawing ---------- */
+let grain=null;
+function makeGrain(){const g=document.createElement('canvas');g.width=g.height=96;const x=g.getContext('2d');const d=x.createImageData(96,96);for(let i=0;i<d.data.length;i+=4){const v=Math.random()*255;d.data[i]=d.data[i+1]=d.data[i+2]=v;d.data[i+3]=26}x.putImageData(d,0,0);return g}
+
+function drawFool(c,f,t){
+  c.save();c.translate(f.x,f.y);c.scale(f.face*1.05,1.05);
+  const ph=f.moving?Math.sin(t*9):0, cr=f.crouch;
+  const hipY=-96+cr*38, shX=f.lean*16+cr*6, shY=hipY-70+cr*4;
+  c.lineCap='round';c.lineJoin='round';
+  // legs
+  const legs=[[ph*20+f.step*42,-f.step*6],[-ph*20,0]];
+  legs.forEach(([fx,fy],i)=>{
+    const kx=fx*.5+cr*30, ky=hipY/2+cr*10;
+    c.strokeStyle='#e9e2d2';c.lineWidth=13;
+    c.beginPath();c.moveTo(i?-7:7,hipY);c.lineTo(kx,ky);c.lineTo(fx,fy-8);c.stroke();
+    c.fillStyle='#d9a92a';c.beginPath();c.ellipse(fx+6,fy-5,13,7,0,0,Math.PI*2);c.fill();
+  });
+  // staff and bundle over the back shoulder
+  c.strokeStyle='#7a5a36';c.lineWidth=6;c.beginPath();c.moveTo(shX+14,shY+36);c.lineTo(shX-58,shY-64);c.stroke();
+  c.fillStyle='#8c4a33';c.beginPath();c.ellipse(shX-64,shY-66,17,13,-.4,0,Math.PI*2);c.fill();
+  c.fillStyle='#d6b35a';c.beginPath();c.arc(shX-68,shY-70,3,0,7);c.arc(shX-58,shY-62,3,0,7);c.fill();
+  // tunic
+  c.fillStyle='#2f3450';c.beginPath();c.moveTo(-26,hipY+20);c.lineTo(28,hipY+20);c.lineTo(shX+20,shY);c.lineTo(shX-18,shY);c.closePath();c.fill();
+  c.fillStyle='#c99a3a';[[-10,hipY],[10,hipY-18],[-4,hipY-38],[14,hipY+8]].forEach(([a,b])=>{c.beginPath();c.arc(a+shX*.5,b,4.5,0,7);c.fill()});
+  c.fillStyle='#b8412e';[[4,hipY-8],[-14,hipY-24]].forEach(([a,b])=>{c.beginPath();c.arc(a+shX*.5,b,2.6,0,7);c.fill()});
+  c.strokeStyle='#c99a3a';c.lineWidth=3;c.beginPath();c.moveTo(-24,hipY+4);c.lineTo(26,hipY+4);c.stroke();
+  // front arm with the white rose
+  const ang=lerp(1.25,.05,f.reach), ax=shX+10, ay=shY+8;
+  const hx=ax+Math.cos(ang)*52, hy=ay+Math.sin(ang)*52;
+  c.strokeStyle='#ece6d8';c.lineWidth=10;c.beginPath();c.moveTo(ax,ay);c.lineTo(hx,hy);c.stroke();
+  c.fillStyle='#f7f4ec';c.strokeStyle='#8a8f7e';c.lineWidth=1.5;c.beginPath();c.arc(hx+4,hy-4,6,0,7);c.fill();c.stroke();
+  // head
+  const hdx=shX+3, hdy=shY-21;
+  c.fillStyle='#e7c29f';c.beginPath();c.arc(hdx,hdy,17,0,7);c.fill();
+  c.fillStyle='#b98547';c.beginPath();c.arc(hdx-4,hdy-4,15,Math.PI*.9,Math.PI*1.85);c.fill();
+  c.fillStyle='#5f7d45';c.beginPath();c.ellipse(hdx-1,hdy-14,19,6,-.1,0,7);c.fill();
+  c.strokeStyle='#b8412e';c.lineWidth=4;c.beginPath();c.moveTo(hdx+2,hdy-18);c.quadraticCurveTo(hdx+18,hdy-46,hdx+30,hdy-34);c.stroke();
+  c.fillStyle='#22252b';c.beginPath();c.arc(hdx+9,hdy-2,2,0,7);c.fill();
+  if(f.speak){const o=2+Math.abs(Math.sin(t*14))*3;c.fillStyle='#7a3526';c.beginPath();c.ellipse(hdx+11,hdy+8,3.5,o,0,0,7);c.fill();
+    c.strokeStyle='#d9a92a';c.lineWidth=3;c.beginPath();c.arc(hdx+14,hdy+2,30,-.7,.7);c.stroke();c.beginPath();c.arc(hdx+14,hdy+2,40,-.55,.55);c.stroke();}
+  else{c.strokeStyle='#8a4a35';c.lineWidth=2;c.beginPath();c.moveTo(hdx+7,hdy+8);c.lineTo(hdx+13,hdy+7);c.stroke()}
+  c.restore();
+}
+function drawDog(c,d,t){
+  c.save();c.translate(d.x,d.y);c.scale(d.face,1);
+  const lie=d.lie, bob=d.moving?Math.sin(t*12)*2:0;
+  const by=-26+lie*14+bob;
+  c.strokeStyle='#3a3d45';c.lineWidth=2;c.fillStyle='#f6f2e8';
+  if(lie<.7){c.lineWidth=5;c.strokeStyle='#e8e2d3';const s=d.moving?Math.sin(t*12)*6:0;[[-14,s],[-6,-s],[12,-s],[18,s]].forEach(([lx,o])=>{c.beginPath();c.moveTo(lx,by+6);c.lineTo(lx+o,-2+lie*6);c.stroke()});c.strokeStyle='#3a3d45';c.lineWidth=2}
+  c.beginPath();c.ellipse(0,by,26,13,0,0,7);c.fill();c.stroke();
+  c.beginPath();c.moveTo(-24,by-4);c.quadraticCurveTo(-40,by-26+Math.sin(t*8)*6,-34,by-30);c.stroke();
+  const hx=24,hy=by-12+lie*6;
+  c.beginPath();c.arc(hx,hy,11,0,7);c.fill();c.stroke();
+  c.beginPath();c.ellipse(hx+11,hy+3,7,5,0,0,7);c.fill();c.stroke();
+  c.fillStyle='#c9c0ad';c.beginPath();c.ellipse(hx-5,hy-9,5,9,-.5,0,7);c.fill();
+  c.fillStyle='#22252b';c.beginPath();c.arc(hx+4,hy-2,1.8,0,7);c.fill();
+  if(d.bark){c.fillStyle='#fff';c.strokeStyle='#22252b';c.lineWidth=2;c.beginPath();c.roundRect?c.roundRect(hx+12,hy-44,62,26,8):c.rect(hx+12,hy-44,62,26);c.fill();c.stroke();
+    c.save();c.scale(d.face,1);c.fillStyle='#22252b';c.font='600 16px "IBM Plex Mono",monospace';c.textAlign='center';c.fillText('BARK',(hx+43)*d.face,hy-26);c.restore();}
+  c.restore();
+}
+function drawPlank(c,p){
+  if(p.cy>2000)return;
+  c.save();c.translate(p.cx,p.cy);c.rotate(p.a);
+  c.fillStyle='#7d5d3f';c.fillRect(-118,-8,236,16);
+  c.strokeStyle='#5b412b';c.lineWidth=2;c.strokeRect(-118,-8,236,16);
+  c.beginPath();c.moveTo(-100,-2);c.lineTo(60,-3);c.moveTo(-60,3);c.lineTo(100,2);c.stroke();
+  c.restore();
+}
+function strokePath(c,p,w,col){c.strokeStyle=col;c.lineWidth=w;c.lineCap='round';c.lineJoin='round';c.beginPath();p.pts.forEach(([x,y],i)=>i?c.lineTo(x,y):c.moveTo(x,y));c.stroke()}
+
+function drawWorld(c,t,W,H,opt){
+  const L=light(t), dk=1-L;
+  const [cx,cy,z]=camAt(t);
+  const s=W/WW*z;
+  c.setTransform(s,0,0,s,W/2-cx*s,H/2-cy*s);
+  // sky, RWS yellow fading to dusk
+  const g=c.createLinearGradient(0,0,0,900);
+  g.addColorStop(0,mix('#e2b73a','#3a3452',dk*1.3>1?1:dk*1.3));
+  g.addColorStop(1,mix('#f2d98a','#b8674d',clamp(dk*1.5)));
+  c.fillStyle=g;c.fillRect(-50,-50,WW+100,1000);
+  // sun
+  c.fillStyle=mix('#fff3c4','#f0a060',dk);c.beginPath();c.arc(220,sunY(t),52,0,7);c.fill();
+  // back ridge
+  c.fillStyle=mix('#9aa7b4','#4b4a63',dk);c.beginPath();c.moveTo(-50,700);[[120,590],[300,650],[470,560],[640,640],[820,570],[1130,650]].forEach(p=>c.lineTo(...p));c.lineTo(1130,950);c.lineTo(-50,950);c.fill();
+  // front ridge hides the sun as it sets
+  c.fillStyle=mix('#7d8a86','#3a3b4c',dk);c.beginPath();c.moveTo(-50,790);[[120,720],[260,772],[380,700],[520,800],[700,740],[860,792],[1130,722]].forEach(p=>c.lineTo(...p));c.lineTo(1130,980);c.lineTo(-50,980);c.fill();
+  // water in the gorge
+  c.fillStyle=mix('#4f8290','#27394a',dk);c.beginPath();c.moveTo(556,862);c.lineTo(604,862);c.lineTo(820,1990);c.lineTo(340,1990);c.fill();
+  const surge=t>26&&t<31.5?1:0, sp=60+surge*170;
+  c.strokeStyle=mix('#d6e6e4','#7d8f9c',dk);c.lineWidth=4;c.globalAlpha=.7;
+  for(let i=0;i<34;i++){const yy=860+((i*151+t*sp*(1+i%3*.2))%1100);const l=edgeX(NEAR_EDGE,yy),r=edgeX(FAR_EDGE,yy);const xx=lerp(l,r,((i*37)%100)/100);const w=(r-l)*.12;c.beginPath();c.moveTo(xx-w,yy);c.quadraticCurveTo(xx,yy-6,xx+w,yy);c.stroke()}
+  c.globalAlpha=1;
+  // far bank, lit while the sun is up
+  c.fillStyle=mix('#b3a765','#4f5344',dk);c.beginPath();c.moveTo(600,860);c.lineTo(1130,880);c.lineTo(1130,1980);c.lineTo(730,1980);c.lineTo(662,1290);c.closePath();c.fill();
+  c.fillStyle=mix('#6f6a55','#2e2f2c',dk);c.beginPath();c.moveTo(662,1290);c.lineTo(600,860);c.lineTo(626,860);c.lineTo(700,1300);c.lineTo(770,1980);c.lineTo(730,1980);c.fill();
+  c.fillStyle=mix('#5b4a35','#27231d',dk);c.fillRect(872,1030,16,90);
+  c.fillStyle=mix('#6f9a4e','#2f3d2c',dk);c.beginPath();c.arc(880,1010,56,0,7);c.arc(840,1040,40,0,7);c.arc(920,1045,42,0,7);c.fill();
+  if(L>.5){c.fillStyle=`rgba(255,226,140,${(L-.5)*.35})`;c.beginPath();c.moveTo(600,860);c.lineTo(1130,880);c.lineTo(1130,1400);c.lineTo(680,1400);c.fill()}
+  // near bank
+  c.fillStyle=mix('#8b8a5c','#3a3b30',dk);c.beginPath();c.moveTo(-50,930);c.lineTo(560,860);c.lineTo(455,1290);c.lineTo(420,1980);c.lineTo(-50,1980);c.closePath();c.fill();
+  c.fillStyle=mix('#6a6650','#2b2b25',dk);c.beginPath();c.moveTo(560,860);c.lineTo(455,1290);c.lineTo(420,1980);c.lineTo(392,1980);c.lineTo(430,1290);c.lineTo(538,870);c.fill();
+  // paths
+  const pathCol=mix('#d4c697','#6d6754',dk);
+  strokePath(c,UP,26,pathCol);strokePath(c,ALT,30,pathCol);
+  c.fillStyle=mix('#e2d27a','#77704a',dk);for(let i=1;i<9;i++){const [px,py]=along(ALT,i/9);c.beginPath();c.arc(px+24,py-16,5,0,7);c.arc(px-26,py+10,4,0,7);c.fill()}
+  if(opt.annotate){const a=clamp((t-11.6)/1.2)*(t<21?1:clamp((22-t)));if(a>0){c.save();c.globalAlpha=a;c.setLineDash([14,12]);strokePath(c,UP,6,'#d9a92a');strokePath(c,ALT,6,'#d9a92a');c.setLineDash([]);
+    c.font='600 26px "IBM Plex Mono",monospace';c.fillStyle='#1f2228';const lab=(txt,x,y)=>{const w=c.measureText(txt).width+18;c.fillStyle='rgba(245,244,239,.92)';c.fillRect(x-4,y-26,w,36);c.fillStyle='#1f2228';c.fillText(txt,x+5,y)};
+    lab('UPHILL ROUTE',120,1000);lab('EASIER PATH',60,1600);c.restore()}}
+  // rock he catches
+  c.fillStyle=mix('#8e8a7c','#3d3c38',dk);c.beginPath();c.ellipse(452,1318,26,16,0,0,7);c.fill();
+  // plank, dog, fool
+  drawPlank(c,plankAt(t));
+  const f=foolAt(t), d=dogAt(t);
+  if(d.y<f.y){drawDog(c,d,t);drawFool(c,f,t)}else{drawFool(c,f,t);drawDog(c,d,t)}
+  // dusk wash
+  c.setTransform(1,0,0,1,0,0);
+  if(dk>0){c.fillStyle=`rgba(28,26,52,${dk*.32})`;c.fillRect(0,0,W,H)}
+  if(grain){c.globalAlpha=1;c.fillStyle=c.createPattern(grain,'repeat');c.fillRect(0,0,W,H)}
+}
+function drawOverlay(c,t,W,H,opt){
+  const sh=shotAt(t), u=W/540;
+  // card title overlay
+  const ca=clamp((t-1.1)/.4)*clamp((3-t)/.4);
+  if(ca>0){c.save();c.globalAlpha=ca;c.textAlign='center';c.fillStyle='rgba(18,20,25,.55)';c.fillRect(W*.18,H*.17-30*u,W*.64,46*u);c.fillStyle='#f4e7c0';c.font=`${28*u}px "IM Fell English",Georgia,serif`;c.fillText('0 · THE FOOL',W/2,H*.17);c.restore()}
+  // subtitle
+  const sub=SUBS.find(s=>t>=s.a&&t<=s.b);
+  if(sub){c.save();c.font=`500 ${26*u}px "Alegreya Sans",sans-serif`;c.textAlign='center';const w=c.measureText(sub.t).width+28*u;c.fillStyle='rgba(12,13,16,.72)';c.fillRect(W/2-w/2,H*.8-30*u,w,44*u);c.fillStyle='#fff';c.fillText(sub.t,W/2,H*.8);c.restore()}
+  // distant work rhythm cue
+  if(t>36.6){c.save();c.globalAlpha=clamp((t-36.6)/.5);c.font=`${16*u}px "IBM Plex Mono",monospace`;c.fillStyle='#f1e6c6';c.textAlign='right';c.fillText('♪ distant work rhythm',W-16*u,H-22*u);c.restore()}
+  if(opt.hud){c.save();c.font=`${14*u}px "IBM Plex Mono",monospace`;c.fillStyle='rgba(12,13,16,.6)';c.fillRect(10*u,10*u,190*u,26*u);c.fillStyle='#f1efe8';c.fillText(`${sh.id} · ${t.toFixed(1)}s`,18*u,28*u);c.restore()}
+}
+function render(canvas,t,opt){
+  const c=canvas.getContext('2d');const W=canvas.width,H=canvas.height;
+  c.setTransform(1,0,0,1,0,0);c.clearRect(0,0,W,H);
+  drawWorld(c,t,W,H,opt);drawOverlay(c,t,W,H,opt);
+}
+
+/* ---------- main player ---------- */
+const reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+const main=document.getElementById('main');
+const dpr=Math.min(2,window.devicePixelRatio||1);
+main.width=540*dpr;main.height=960*dpr;
+let T=0.8, playing=false, loopShot=false, last=0;
+const scrub=document.getElementById('scrub');
+SHOTS.forEach(s=>{const d=document.createElement('div');d.className='seg';d.style.flex=String(s.e-s.s);d.textContent=s.k;d.dataset.k=s.k;scrub.appendChild(d)});
+const head=document.createElement('div');head.className='head';scrub.appendChild(head);
+const timeEl=document.getElementById('time'), playBtn=document.getElementById('play');
+function setT(t){T=clamp(t,0,DUR-0.001);}
+function seekShot(k,play){const s=SHOTS.find(x=>x.k===k);setT(s.s+0.01);if(play){playing=true;playBtn.textContent='Pause'}}
+scrub.addEventListener('pointerdown',e=>{const r=scrub.getBoundingClientRect();setT((e.clientX-r.left)/r.width*DUR)});
+scrub.addEventListener('keydown',e=>{const sh=shotAt(T);const i=SHOTS.indexOf(sh);if(e.key==='ArrowRight'){seekShot(SHOTS[Math.min(7,i+1)].k);e.preventDefault()}if(e.key==='ArrowLeft'){seekShot(SHOTS[Math.max(0,i-1)].k);e.preventDefault()}});
+playBtn.addEventListener('click',()=>{if(T>=DUR-0.01)setT(0);playing=!playing;playBtn.textContent=playing?'Pause':'Play'});
+document.getElementById('restart').addEventListener('click',()=>{setT(0);playing=true;playBtn.textContent='Pause'});
+const loopBtn=document.getElementById('loopShot');
+loopBtn.addEventListener('click',()=>{loopShot=!loopShot;loopBtn.setAttribute('aria-pressed',String(loopShot));loopBtn.textContent=loopShot?'Looping shot':'Loop shot'});
+
+const sheet=document.getElementById('sheet');let sheetK='';
+function esc(s){return String(s).replace(/[&<>"]/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[m]))}
+function renderSheet(sh){
+  sheetK=sh.k;
+  sheet.innerHTML=`<div class="eyebrow">${sh.id} · ${sh.s}–${sh.e} s</div>
+  <h2>${esc(sh.title)}</h2>
+  ${sh.dialogue?`<div class="line">“${esc(sh.dialogue)}”</div>`:`<div class="line none">No dialogue in this shot.</div>`}
+  <dl class="kv"><dt>Action</dt><dd>${esc(sh.action)}</dd><dt>Why watch</dt><dd>${esc(sh.why)}</dd><dt>Framing</dt><dd>${esc(sh.framing)}</dd><dt>Mouth owner</dt><dd>${esc(sh.speaker)}</dd><dt>Sound</dt><dd>${esc(sh.sound)}</dd></dl>
+  <div class="note-geo">Fixed geography for every shot: near bank on the left, river flowing toward camera, sunlit far bank on the right, uphill route climbing left, easier path dropping left. Confirm screen direction against the approved trailer opening before Level 2. The gold arcs at his mouth mark when the Fool is the speaker.</div>
+  <button class="btn" type="button" data-go="${sh.k}">Review notes for ${sh.k}</button>`;
+  sheet.querySelector('[data-go]').addEventListener('click',()=>{document.getElementById('card-'+sh.k).scrollIntoView({behavior:reduce?'auto':'smooth',block:'center'})});
+}
+
+/* ---------- shot cards ---------- */
+const grid=document.getElementById('grid');
+const minis=[];
+SHOTS.forEach(sh=>{
+  const el=document.createElement('article');el.className='card';el.id='card-'+sh.k;
+  const sug=SUGG[sh.k];
+  el.innerHTML=`<div class="thumb"><canvas width="216" height="384" aria-label="Scene prototype ${sh.id}"></canvas><button type="button" data-play>Play in player</button></div>
+  <div class="body">
+    <div class="hd"><span class="eyebrow">${sh.k} · ${sh.s}–${sh.e} s</span></div>
+    <h3>${esc(sh.title)}</h3>
+    ${sh.dialogue?`<div class="quote">“${esc(sh.dialogue)}”</div>`:`<div class="quote none">No dialogue</div>`}
+    <div class="spk">${esc(sh.speaker)}</div>
+    <details><summary>Action, framing and sound</summary><dl class="kv"><dt>Action</dt><dd>${esc(sh.action)}</dd><dt>Framing</dt><dd>${esc(sh.framing)}</dd><dt>Sound</dt><dd>${esc(sh.sound)}</dd></dl></details>
+    <div class="verdict" role="group" aria-label="Verdict for ${sh.k}">
+      <button type="button" data-v="keep" aria-pressed="false">Keep</button>
+      <button type="button" data-v="rework" aria-pressed="false">Rework</button>
+      <button type="button" data-v="discuss" aria-pressed="false">Discuss</button>
+    </div>
+    <textarea id="note-${sh.k}" aria-label="Notes for ${sh.k}" placeholder="What should change in this shot?"></textarea>
+    ${sug?`<div class="sugg"><span class="t">Proposed change for r3</span><span>${esc(sug)}</span><div class="row" role="group" aria-label="Proposal for ${sh.k}"><button type="button" data-s="adopt" aria-pressed="false">Adopt</button><button type="button" data-s="skip" aria-pressed="false">Skip</button></div></div>`:''}
+  </div>`;
+  grid.appendChild(el);
+  const cv=el.querySelector('canvas');cv.width=216*dpr;cv.height=384*dpr;
+  const m={cv,sh,visible:false};minis.push(m);
+  el.querySelector('[data-play]').addEventListener('click',()=>{seekShot(sh.k,true);document.querySelector('.stage').scrollIntoView({behavior:reduce?'auto':'smooth'})});
+  cv.addEventListener('click',()=>{seekShot(sh.k,true);document.querySelector('.stage').scrollIntoView({behavior:reduce?'auto':'smooth'})});
+  el.querySelectorAll('[data-v]').forEach(b=>b.addEventListener('click',()=>{const cur=fb[sh.k]||{};setFb(sh.k,{verdict:cur.verdict===b.dataset.v?'':b.dataset.v},true)}));
+  el.querySelectorAll('[data-s]').forEach(b=>b.addEventListener('click',()=>{const cur=fb[sh.k]||{};setFb(sh.k,{suggestion:cur.suggestion===b.dataset.s?'':b.dataset.s},true)}));
+  el.querySelector('textarea').addEventListener('input',e=>setFb(sh.k,{note:e.target.value},false));
+});
+if('IntersectionObserver' in window){const io=new IntersectionObserver(es=>es.forEach(e=>{const m=minis.find(x=>x.cv===e.target);if(m)m.visible=e.isIntersecting}));minis.forEach(m=>io.observe(m.cv))}else minis.forEach(m=>m.visible=true);
+
+/* ---------- questions ---------- */
+const qs=document.getElementById('qs');
+QUESTIONS.forEach(q=>{const d=document.createElement('div');d.className='q';d.innerHTML=`<label for="q-${q.k}">${esc(q.text)}</label><textarea id="q-${q.k}"></textarea>`;qs.appendChild(d);
+  d.querySelector('textarea').addEventListener('input',e=>setFb('general',{[q.k]:e.target.value},false))});
+
+/* ---------- feedback: saved in the reviewer's browser, sent as a GitHub issue ---------- */
+const REPO='ritwik-1994/awarewolf-fools-journey-episodes';
+const fb={};
+const LSKEY='fj-e01-fb-r'+REV;
+try{const s=JSON.parse(localStorage.getItem(LSKEY)||'{}');Object.assign(fb,s)}catch(e){}
+const syncEl=document.getElementById('sync'), syncText=document.getElementById('syncText');
+function setMode(m,msg){syncEl.dataset.mode=m;syncText.textContent=msg}
+function paint(){
+  let n=0;
+  SHOTS.forEach(sh=>{const v=fb[sh.k]||{};const el=document.getElementById('card-'+sh.k);el.dataset.verdict=v.verdict||'';if(v.verdict)n++;
+    el.querySelectorAll('[data-v]').forEach(b=>b.setAttribute('aria-pressed',String(v.verdict===b.dataset.v)));
+    el.querySelectorAll('[data-s]').forEach(b=>b.setAttribute('aria-pressed',String(v.suggestion===b.dataset.s)));
+    const ta=el.querySelector('textarea');if(document.activeElement!==ta&&ta.value!==(v.note||''))ta.value=v.note||'';});
+  const g=fb.general||{};QUESTIONS.forEach(q=>{const ta=document.getElementById('q-'+q.k);if(document.activeElement!==ta&&ta.value!==(g[q.k]||''))ta.value=g[q.k]||''});
+  const nm=document.getElementById('reviewer');if(document.activeElement!==nm)nm.value=fb.reviewer||'';
+  document.getElementById('count').textContent=`${n} of 8 shots marked`;
+}
+let saveOk=true;
+function persist(){try{localStorage.setItem(LSKEY,JSON.stringify(fb));saveOk=true}catch(e){saveOk=false}
+  setMode(saveOk?'synced':'error',saveOk?'Notes save in this browser as you type. Click Send feedback when you’re done.':'This browser can’t save notes. Send feedback before closing the page.')}
+function setFb(key,patch){fb[key]=Object.assign({},fb[key]||{},patch);persist();paint()}
+document.getElementById('reviewer').addEventListener('input',e=>{fb.reviewer=e.target.value;persist()});
+paint();persist();
+function fromHash(){const k=(location.hash||'').slice(1).toUpperCase();if(SHOTS.some(s=>s.k===k))seekShot(k,false)}
+window.addEventListener('hashchange',fromHash);fromHash();
+
+function feedbackText(){
+  const out=[`Before Dark · Episode 1 · Board r${REV} feedback`,`Reviewer: ${fb.reviewer||'(no name given)'}`,''];
+  SHOTS.forEach(sh=>{const v=fb[sh.k]||{};out.push(`${sh.id} ${sh.title}: ${v.verdict?v.verdict.toUpperCase():'unmarked'}${v.suggestion?` · proposal ${v.suggestion}`:''}`);if(v.note)out.push('  '+v.note.replace(/\n/g,'\n  '))});
+  const g=fb.general||{};out.push('');QUESTIONS.forEach(q=>{if(g[q.k])out.push(`${q.text}\n  ${g[q.k].replace(/\n/g,'\n  ')}`)});
+  return out.join('\n');
+}
+function issueBody(){
+  const data={episode:'E01',revision:REV,reviewer:fb.reviewer||'',shots:{},general:fb.general||{}};
+  SHOTS.forEach(sh=>{data.shots[sh.id]=fb[sh.k]||{}});
+  return feedbackText()+'\n\n<details><summary>Machine-readable copy</summary>\n\n```json\n'+JSON.stringify(data)+'\n```\n</details>\n';
+}
+async function copyText(txt,btn,label){
+  try{await navigator.clipboard.writeText(txt);if(btn){btn.textContent='Copied';setTimeout(()=>btn.textContent=label,1600)}return true}
+  catch(e){let box=document.getElementById('copybox');if(!box){box=document.createElement('textarea');box.id='copybox';box.className='copybox';box.setAttribute('aria-label','Feedback text to copy');document.querySelector('.bar-in').appendChild(box)}box.value=txt;box.focus();box.select();return false}
+}
+const copyBtn=document.getElementById('copyBtn');
+copyBtn.addEventListener('click',()=>copyText(feedbackText(),copyBtn,'Copy feedback'));
+const sendBtn=document.getElementById('sendBtn');
+sendBtn.addEventListener('click',async()=>{
+  const title=`E01 r${REV} feedback · ${fb.reviewer||'reviewer'}`;
+  const body=issueBody();
+  let url=`https://github.com/${REPO}/issues/new?title=${encodeURIComponent(title)}&body=${encodeURIComponent(body)}`;
+  if(url.length>7800){await copyText(body,null,'');url=`https://github.com/${REPO}/issues/new?title=${encodeURIComponent(title)}&body=${encodeURIComponent('Your feedback is on your clipboard. Paste it here, then click Create.')}`}
+  const a=document.createElement('a');a.href=url;a.target='_blank';a.rel='noopener';document.body.appendChild(a);a.click();a.remove();
+  setMode('synced','GitHub opened in a new tab. Click “Create” there to send your feedback.');
+});
+
+/* ---------- loop ---------- */
+grain=makeGrain();
+function frame(now){
+  const dt=last?Math.min(.1,(now-last)/1000):0;last=now;
+  if(playing){T+=dt;const sh=shotAt(Math.min(T,DUR-0.001));
+    if(loopShot&&T>=sh.e-0.001&&T-dt<sh.e){T=sh.s}
+    if(T>=DUR){T=DUR-0.001;playing=false;playBtn.textContent='Play'}}
+  render(main,T,{hud:true,annotate:true});
+  const sh=shotAt(T);if(sh.k!==sheetK){renderSheet(sh);scrub.querySelectorAll('.seg').forEach(s=>s.classList.toggle('on',s.dataset.k===sh.k))}
+  head.style.left=(T/DUR*100)+'%';scrub.setAttribute('aria-valuenow',T.toFixed(1));
+  timeEl.textContent=`${T.toFixed(1)} / ${DUR.toFixed(1)} s`;
+  const secs=now/1000;
+  minis.forEach(m=>{if(!m.visible&&m.drawn)return;const len=m.sh.e-m.sh.s;const lt=reduce?m.sh.s+len*.6:m.sh.s+(secs%(len+.6));render(m.cv,Math.min(lt,m.sh.e-0.01),{hud:false,annotate:true});m.drawn=true});
+  requestAnimationFrame(frame);
+}
+if(document.fonts&&document.fonts.ready)document.fonts.ready.then(()=>{});
+requestAnimationFrame(frame);
+})();
+</script>
+
+</body>
+</html>
