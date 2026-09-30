@@ -49,6 +49,11 @@ footer{font-size:13px;color:var(--muted);border-top:1px solid var(--line);paddin
 
   <section style="display:grid;gap:14px" aria-labelledby="rv">
     <h2 id="rv">In review</h2>
+    <a class="ep" href="part-one/">
+      <span class="n">1–20</span>
+      <span><h3>Part One: The Open Road</h3><span class="s">L1 storyboards for all 20 episodes · animatics · season arc</span></span>
+      <span class="pill">Open for feedback</span>
+    </a>
     <a class="ep" href="episodes/001/">
       <span class="n">01</span>
       <span><h3>Before Dark</h3><span class="s">Level 1 storyboard · board r2 · 38 s animatic</span></span>
@@ -58,8 +63,8 @@ footer{font-size:13px;color:var(--muted);border-top:1px solid var(--line);paddin
 
   <section style="display:grid;gap:12px" aria-labelledby="run">
     <h2 id="run">The full run</h2>
-    <div class="strip" id="strip" aria-label="44 episodes, episode 1 in review"></div>
-    <div class="legend">Gold: board in review. Outline: not started.</div>
+    <div class="strip" id="strip" aria-label="44 episodes, episodes 1 to 20 in review"></div>
+    <div class="legend">Gold: L1 storyboard in review. Outline: not started.</div>
   </section>
 
   <section style="display:grid;gap:12px" aria-labelledby="how">
@@ -75,7 +80,7 @@ footer{font-size:13px;color:var(--muted);border-top:1px solid var(--line);paddin
 </main>
 <script>
 const s=document.getElementById('strip');
-for(let i=1;i<=44;i++){const e=document.createElement('span');e.textContent=String(i).padStart(2,'0');if(i===1){e.className='on';}s.appendChild(e)}
+for(let i=1;i<=44;i++){const e=document.createElement('span');e.textContent=String(i).padStart(2,'0');if(i<=20){e.className='on';}s.appendChild(e)}
 </script>
 </body>
 </html>
