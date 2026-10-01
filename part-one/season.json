@@ -35,7 +35,7 @@
    "paid off: trailer line 'They call me the Fool. Because I believe I have infinite potential.'",
    "planted: the plank sliding downstream (loop)"
   ],
-  "runtime": 84,
+  "runtime": 88,
   "shots": [
    {
     "id": "S01",
@@ -957,6 +957,42 @@
       }
      ]
     }
+   },
+   {
+    "id": "S20",
+    "t0": 84.5,
+    "t1": 87.5,
+    "title": "Follow AwareWolf",
+    "framing": "The final image dissolves in a gold-and-blue swirl into the AwareWolf logo card, exactly as the approved trailer ends.",
+    "action": "On screen: follow awarewolf · the AwareWolf logo · @aware._wolf_ · for the whole series.",
+    "speaker": "none",
+    "dialogue": "",
+    "delivery": "",
+    "sound": "The series motif resolves. One soft chain link under the logo.",
+    "stage": {
+     "chars": [],
+     "props": [
+      {
+       "id": "xv_mark",
+       "x": 0.64,
+       "y": 0.7
+      },
+      {
+       "id": "plank",
+       "x": 0.62,
+       "y": 0.74
+      }
+     ],
+     "cam": {
+      "x": 0.6,
+      "y": 0.66,
+      "z": 2.2
+     },
+     "loc": "gorge",
+     "time": "night"
+    },
+    "motion": {},
+    "endcard": true
    }
   ],
   "revision": 3,
@@ -1000,7 +1036,7 @@
    "planted: 'It's just a flower' (the Fool's first lie to himself)",
    "planted: the rose over his heart (paid off E20)"
   ],
-  "runtime": 65,
+  "runtime": 68,
   "shots": [
    {
     "id": "S01",
@@ -1581,6 +1617,52 @@
       "z": 2.4
      }
     }
+   },
+   {
+    "id": "S12",
+    "t0": 65.0,
+    "t1": 68.0,
+    "title": "Follow AwareWolf",
+    "framing": "The final image dissolves in a gold-and-blue swirl into the AwareWolf logo card, exactly as the approved trailer ends.",
+    "action": "On screen: follow awarewolf · the AwareWolf logo · @aware._wolf_ · for the whole series.",
+    "speaker": "none",
+    "dialogue": "",
+    "delivery": "",
+    "sound": "The series motif resolves. One soft chain link under the logo.",
+    "stage": {
+     "chars": [
+      {
+       "id": "fool",
+       "x": 0.4,
+       "y": 0.72,
+       "face": 1,
+       "pose": "sit"
+      },
+      {
+       "id": "dog",
+       "x": 0.34,
+       "y": 0.74,
+       "face": 1,
+       "pose": "sit"
+      }
+     ],
+     "props": [
+      {
+       "id": "bridge_pilings",
+       "x": 0.7,
+       "y": 0.86
+      }
+     ],
+     "cam": {
+      "x": 0.55,
+      "y": 0.7,
+      "z": 1.6
+     },
+     "loc": "mountain_road",
+     "time": "dawn"
+    },
+    "motion": {},
+    "endcard": true
    }
   ],
   "revision": 2,
@@ -1616,7 +1698,7 @@
    "planted: the Magician's invitation",
    "planted: the Fool's 'maybe'"
   ],
-  "runtime": 65,
+  "runtime": 68,
   "shots": [
    {
     "id": "S01",
@@ -2200,6 +2282,53 @@
       }
      ]
     }
+   },
+   {
+    "id": "S12",
+    "t0": 65.0,
+    "t1": 68.0,
+    "title": "Follow AwareWolf",
+    "framing": "The final image dissolves in a gold-and-blue swirl into the AwareWolf logo card, exactly as the approved trailer ends.",
+    "action": "On screen: follow awarewolf · the AwareWolf logo · @aware._wolf_ · for the whole series.",
+    "speaker": "none",
+    "dialogue": "",
+    "delivery": "",
+    "sound": "The series motif resolves. One soft chain link under the logo.",
+    "stage": {
+     "chars": [
+      {
+       "id": "fool",
+       "x": 0.6,
+       "y": 0.72,
+       "face": 1,
+       "pose": "walk"
+      },
+      {
+       "id": "traveler",
+       "x": 0.7,
+       "y": 0.72,
+       "face": 1,
+       "pose": "walk"
+      },
+      {
+       "id": "dog",
+       "x": 0.52,
+       "y": 0.74,
+       "face": 1,
+       "pose": "walk"
+      }
+     ],
+     "props": [],
+     "cam": {
+      "x": 0.6,
+      "y": 0.6,
+      "z": 1.4
+     },
+     "loc": "workshop",
+     "time": "day"
+    },
+    "motion": {},
+    "endcard": true
    }
   ],
   "revision": 2,
@@ -2240,7 +2369,7 @@
    "planted: the offcut (in the bundle)",
    "planted: 'Ugly. But mine.'"
   ],
-  "runtime": 79,
+  "runtime": 82,
   "shots": [
    {
     "id": "S01",
@@ -2847,6 +2976,37 @@
       "z": 2.4
      }
     }
+   },
+   {
+    "id": "S14",
+    "t0": 79.0,
+    "t1": 82.0,
+    "title": "Follow AwareWolf",
+    "framing": "The final image dissolves in a gold-and-blue swirl into the AwareWolf logo card, exactly as the approved trailer ends.",
+    "action": "On screen: follow awarewolf · the AwareWolf logo · @aware._wolf_ · for the whole series.",
+    "speaker": "none",
+    "dialogue": "",
+    "delivery": "",
+    "sound": "The series motif resolves. One soft chain link under the logo.",
+    "stage": {
+     "chars": [],
+     "props": [
+      {
+       "id": "torch",
+       "x": 0.2,
+       "y": 0.45
+      }
+     ],
+     "cam": {
+      "x": 0.3,
+      "y": 0.5,
+      "z": 2.2
+     },
+     "loc": "workshop",
+     "time": "day"
+    },
+    "motion": {},
+    "endcard": true
    }
   ],
   "revision": 2,
@@ -2889,7 +3049,7 @@
    "planted: listening (used in E06, E07, E09, E12, E13, E18, E20)",
    "planted: the water under the stones"
   ],
-  "runtime": 62,
+  "runtime": 65,
   "shots": [
    {
     "id": "S01",
@@ -3435,6 +3595,39 @@
       "z": 2.6
      }
     }
+   },
+   {
+    "id": "S12",
+    "t0": 62.0,
+    "t1": 65.0,
+    "title": "Follow AwareWolf",
+    "framing": "The final image dissolves in a gold-and-blue swirl into the AwareWolf logo card, exactly as the approved trailer ends.",
+    "action": "On screen: follow awarewolf · the AwareWolf logo · @aware._wolf_ · for the whole series.",
+    "speaker": "none",
+    "dialogue": "",
+    "delivery": "",
+    "sound": "The series motif resolves. One soft chain link under the logo.",
+    "stage": {
+     "chars": [
+      {
+       "id": "dog",
+       "x": 0.54,
+       "y": 0.74,
+       "face": 1,
+       "pose": "stand"
+      }
+     ],
+     "props": [],
+     "cam": {
+      "x": 0.6,
+      "y": 0.78,
+      "z": 2.4
+     },
+     "loc": "temple",
+     "time": "night"
+    },
+    "motion": {},
+    "endcard": true
    }
   ],
   "revision": 2,
@@ -3478,7 +3671,7 @@
    "planted: the listening stone",
    "planted: the Traveler's first crack of irritation"
   ],
-  "runtime": 62,
+  "runtime": 65,
   "shots": [
    {
     "id": "S01",
@@ -3961,6 +4154,52 @@
       "z": 2.6
      }
     }
+   },
+   {
+    "id": "S12",
+    "t0": 62.0,
+    "t1": 65.0,
+    "title": "Follow AwareWolf",
+    "framing": "The final image dissolves in a gold-and-blue swirl into the AwareWolf logo card, exactly as the approved trailer ends.",
+    "action": "On screen: follow awarewolf · the AwareWolf logo · @aware._wolf_ · for the whole series.",
+    "speaker": "none",
+    "dialogue": "",
+    "delivery": "",
+    "sound": "The series motif resolves. One soft chain link under the logo.",
+    "stage": {
+     "chars": [
+      {
+       "id": "priestess",
+       "x": 0.5,
+       "y": 0.66,
+       "face": 1,
+       "pose": "reach"
+      },
+      {
+       "id": "fool",
+       "x": 0.5,
+       "y": 0.74,
+       "face": 1,
+       "pose": "reach"
+      }
+     ],
+     "props": [
+      {
+       "id": "stone",
+       "x": 0.5,
+       "y": 0.68
+      }
+     ],
+     "cam": {
+      "x": 0.5,
+      "y": 0.62,
+      "z": 2.2
+     },
+     "loc": "temple",
+     "time": "night"
+    },
+    "motion": {},
+    "endcard": true
    }
   ],
   "revision": 2,
@@ -4010,7 +4249,7 @@
    "planted: tend, don't force",
    "shadow: projection ('You're tied to this dirt')"
   ],
-  "runtime": 64,
+  "runtime": 67,
   "shots": [
    {
     "id": "S01",
@@ -4586,6 +4825,45 @@
       "z": 2.9
      }
     }
+   },
+   {
+    "id": "S12",
+    "t0": 64.0,
+    "t1": 67.0,
+    "title": "Follow AwareWolf",
+    "framing": "The final image dissolves in a gold-and-blue swirl into the AwareWolf logo card, exactly as the approved trailer ends.",
+    "action": "On screen: follow awarewolf · the AwareWolf logo · @aware._wolf_ · for the whole series.",
+    "speaker": "none",
+    "dialogue": "",
+    "delivery": "",
+    "sound": "The series motif resolves. One soft chain link under the logo.",
+    "stage": {
+     "chars": [
+      {
+       "id": "fool",
+       "x": 0.48,
+       "y": 0.72,
+       "face": 1,
+       "pose": "crouch"
+      }
+     ],
+     "props": [
+      {
+       "id": "flower_bud",
+       "x": 0.52,
+       "y": 0.68
+      }
+     ],
+     "cam": {
+      "x": 0.5,
+      "y": 0.66,
+      "z": 2.6
+     },
+     "loc": "garden",
+     "time": "dawn"
+    },
+    "motion": {},
+    "endcard": true
    }
   ],
   "revision": 2,
@@ -4630,7 +4908,7 @@
    "planted: the chain link on his wrist",
    "planted: the soft tie"
   ],
-  "runtime": 77,
+  "runtime": 80,
   "shots": [
    {
     "id": "S01",
@@ -5279,6 +5557,42 @@
       "z": 3.0
      }
     }
+   },
+   {
+    "id": "S15",
+    "t0": 77.0,
+    "t1": 80.0,
+    "title": "Follow AwareWolf",
+    "framing": "The final image dissolves in a gold-and-blue swirl into the AwareWolf logo card, exactly as the approved trailer ends.",
+    "action": "On screen: follow awarewolf · the AwareWolf logo · @aware._wolf_ · for the whole series.",
+    "speaker": "none",
+    "dialogue": "",
+    "delivery": "",
+    "sound": "The series motif resolves. One soft chain link under the logo.",
+    "stage": {
+     "chars": [],
+     "props": [
+      {
+       "id": "chain",
+       "x": 0.5,
+       "y": 0.6
+      },
+      {
+       "id": "xv_mark",
+       "x": 0.5,
+       "y": 0.6
+      }
+     ],
+     "cam": {
+      "x": 0.5,
+      "y": 0.6,
+      "z": 3.0
+     },
+     "loc": "garden",
+     "time": "day"
+    },
+    "motion": {},
+    "endcard": true
    }
   ],
   "revision": 2,
@@ -5327,7 +5641,7 @@
    "planted: the Emperor's test",
    "planted: the failed brace"
   ],
-  "runtime": 73,
+  "runtime": 76,
   "shots": [
    {
     "id": "S01",
@@ -5875,6 +6189,39 @@
       "z": 2.4
      }
     }
+   },
+   {
+    "id": "S14",
+    "t0": 73.0,
+    "t1": 76.0,
+    "title": "Follow AwareWolf",
+    "framing": "The final image dissolves in a gold-and-blue swirl into the AwareWolf logo card, exactly as the approved trailer ends.",
+    "action": "On screen: follow awarewolf · the AwareWolf logo · @aware._wolf_ · for the whole series.",
+    "speaker": "none",
+    "dialogue": "",
+    "delivery": "",
+    "sound": "The series motif resolves. One soft chain link under the logo.",
+    "stage": {
+     "chars": [
+      {
+       "id": "emperor",
+       "x": 0.5,
+       "y": 0.6,
+       "face": 1,
+       "pose": "stand"
+      }
+     ],
+     "props": [],
+     "cam": {
+      "x": 0.5,
+      "y": 0.52,
+      "z": 2.2
+     },
+     "loc": "gate",
+     "time": "day"
+    },
+    "motion": {},
+    "endcard": true
    }
   ],
   "revision": 2,
@@ -5925,7 +6272,7 @@
    "planted: the measuring cord",
    "planted: 'Who was your friend?'"
   ],
-  "runtime": 69,
+  "runtime": 72,
   "shots": [
    {
     "id": "S01",
@@ -6457,6 +6804,46 @@
       }
      ]
     }
+   },
+   {
+    "id": "S13",
+    "t0": 69.0,
+    "t1": 72.0,
+    "title": "Follow AwareWolf",
+    "framing": "The final image dissolves in a gold-and-blue swirl into the AwareWolf logo card, exactly as the approved trailer ends.",
+    "action": "On screen: follow awarewolf · the AwareWolf logo · @aware._wolf_ · for the whole series.",
+    "speaker": "none",
+    "dialogue": "",
+    "delivery": "",
+    "sound": "The series motif resolves. One soft chain link under the logo.",
+    "stage": {
+     "chars": [
+      {
+       "id": "fool",
+       "x": 0.5,
+       "y": 0.72,
+       "face": 1,
+       "pose": "walk"
+      },
+      {
+       "id": "dog",
+       "x": 0.42,
+       "y": 0.74,
+       "face": 1,
+       "pose": "walk"
+      }
+     ],
+     "props": [],
+     "cam": {
+      "x": 0.5,
+      "y": 0.6,
+      "z": 1.6
+     },
+     "loc": "gate",
+     "time": "day"
+    },
+    "motion": {},
+    "endcard": true
    }
   ],
   "revision": 2,
@@ -6493,7 +6880,7 @@
    "planted: the acolyte",
    "shadow: projection ('You lot just copy each other')"
   ],
-  "runtime": 68,
+  "runtime": 71,
   "shots": [
    {
     "id": "S01",
@@ -7083,6 +7470,45 @@
       "z": 2.6
      }
     }
+   },
+   {
+    "id": "S14",
+    "t0": 68.0,
+    "t1": 71.0,
+    "title": "Follow AwareWolf",
+    "framing": "The final image dissolves in a gold-and-blue swirl into the AwareWolf logo card, exactly as the approved trailer ends.",
+    "action": "On screen: follow awarewolf · the AwareWolf logo · @aware._wolf_ · for the whole series.",
+    "speaker": "none",
+    "dialogue": "",
+    "delivery": "",
+    "sound": "The series motif resolves. One soft chain link under the logo.",
+    "stage": {
+     "chars": [
+      {
+       "id": "hierophant",
+       "x": 0.5,
+       "y": 0.66,
+       "face": 1,
+       "pose": "crouch"
+      }
+     ],
+     "props": [
+      {
+       "id": "knot_rope",
+       "x": 0.5,
+       "y": 0.68
+      }
+     ],
+     "cam": {
+      "x": 0.5,
+      "y": 0.6,
+      "z": 2.2
+     },
+     "loc": "hall",
+     "time": "day"
+    },
+    "motion": {},
+    "endcard": true
    }
   ],
   "revision": 2,
@@ -7135,7 +7561,7 @@
    "paid off: measuring cord (E10)",
    "planted: the true knot"
   ],
-  "runtime": 67,
+  "runtime": 70,
   "shots": [
    {
     "id": "S01",
@@ -7748,6 +8174,31 @@
       "z": 2.3
      }
     }
+   },
+   {
+    "id": "S14",
+    "t0": 67.0,
+    "t1": 70.0,
+    "title": "Follow AwareWolf",
+    "framing": "The final image dissolves in a gold-and-blue swirl into the AwareWolf logo card, exactly as the approved trailer ends.",
+    "action": "On screen: follow awarewolf · the AwareWolf logo · @aware._wolf_ · for the whole series.",
+    "speaker": "none",
+    "dialogue": "",
+    "delivery": "",
+    "sound": "The series motif resolves. One soft chain link under the logo.",
+    "stage": {
+     "chars": [],
+     "props": [],
+     "cam": {
+      "x": 0.2,
+      "y": 0.6,
+      "z": 2.0
+     },
+     "loc": "hall",
+     "time": "day"
+    },
+    "motion": {},
+    "endcard": true
    }
   ],
   "revision": 2,
@@ -7798,7 +8249,7 @@
    "planted: choosing out loud",
    "planted: the Lovers' vow (E14)"
   ],
-  "runtime": 64,
+  "runtime": 67,
   "shots": [
    {
     "id": "S01",
@@ -8397,6 +8848,39 @@
     },
     "t0": 61.0,
     "t1": 64.0
+   },
+   {
+    "id": "S14",
+    "t0": 64.0,
+    "t1": 67.0,
+    "title": "Follow AwareWolf",
+    "framing": "The final image dissolves in a gold-and-blue swirl into the AwareWolf logo card, exactly as the approved trailer ends.",
+    "action": "On screen: follow awarewolf · the AwareWolf logo · @aware._wolf_ · for the whole series.",
+    "speaker": "none",
+    "dialogue": "",
+    "delivery": "",
+    "sound": "The series motif resolves. One soft chain link under the logo.",
+    "stage": {
+     "chars": [
+      {
+       "id": "lover_m",
+       "x": 0.58,
+       "y": 0.72,
+       "face": -1,
+       "pose": "stand"
+      }
+     ],
+     "props": [],
+     "cam": {
+      "x": 0.58,
+      "y": 0.62,
+      "z": 2.2
+     },
+     "loc": "eden",
+     "time": "day"
+    },
+    "motion": {},
+    "endcard": true
    }
   ],
   "revision": 2,
@@ -8446,7 +8930,7 @@
    "paid off: the flowering deadline is now running",
    "planted: 'What will you have left?'"
   ],
-  "runtime": 72,
+  "runtime": 75,
   "shots": [
    {
     "id": "S01",
@@ -9055,6 +9539,46 @@
       }
      ]
     }
+   },
+   {
+    "id": "S14",
+    "t0": 72.0,
+    "t1": 75.0,
+    "title": "Follow AwareWolf",
+    "framing": "The final image dissolves in a gold-and-blue swirl into the AwareWolf logo card, exactly as the approved trailer ends.",
+    "action": "On screen: follow awarewolf · the AwareWolf logo · @aware._wolf_ · for the whole series.",
+    "speaker": "none",
+    "dialogue": "",
+    "delivery": "",
+    "sound": "The series motif resolves. One soft chain link under the logo.",
+    "stage": {
+     "chars": [
+      {
+       "id": "fool",
+       "x": 0.56,
+       "y": 0.72,
+       "face": 1,
+       "pose": "walk"
+      },
+      {
+       "id": "dog",
+       "x": 0.48,
+       "y": 0.74,
+       "face": 1,
+       "pose": "walk"
+      }
+     ],
+     "props": [],
+     "cam": {
+      "x": 0.56,
+      "y": 0.62,
+      "z": 1.8
+     },
+     "loc": "eden",
+     "time": "dawn"
+    },
+    "motion": {},
+    "endcard": true
    }
   ],
   "revision": 2,
@@ -9098,7 +9622,7 @@
    "planted: the Charioteer",
    "planted: the star"
   ],
-  "runtime": 69,
+  "runtime": 72,
   "shots": [
    {
     "id": "S01",
@@ -9695,6 +10219,46 @@
       "z": 2.4
      }
     }
+   },
+   {
+    "id": "S14",
+    "t0": 69.0,
+    "t1": 72.0,
+    "title": "Follow AwareWolf",
+    "framing": "The final image dissolves in a gold-and-blue swirl into the AwareWolf logo card, exactly as the approved trailer ends.",
+    "action": "On screen: follow awarewolf · the AwareWolf logo · @aware._wolf_ · for the whole series.",
+    "speaker": "none",
+    "dialogue": "",
+    "delivery": "",
+    "sound": "The series motif resolves. One soft chain link under the logo.",
+    "stage": {
+     "chars": [
+      {
+       "id": "charioteer",
+       "x": 0.44,
+       "y": 0.64,
+       "face": 1,
+       "pose": "reach"
+      },
+      {
+       "id": "fool",
+       "x": 0.52,
+       "y": 0.72,
+       "face": -1,
+       "pose": "reach"
+      }
+     ],
+     "props": [],
+     "cam": {
+      "x": 0.48,
+      "y": 0.62,
+      "z": 2.2
+     },
+     "loc": "descent",
+     "time": "day"
+    },
+    "motion": {},
+    "endcard": true
    }
   ],
   "revision": 2,
@@ -9756,7 +10320,7 @@
    "paid off: 'Just checking' reveals the Traveler is testing, not robbing",
    "shadow: projection ('Why were you going so fast?')"
   ],
-  "runtime": 69,
+  "runtime": 72,
   "shots": [
    {
     "id": "S01",
@@ -10307,6 +10871,53 @@
       "z": 1.8
      }
     }
+   },
+   {
+    "id": "S13",
+    "t0": 69.0,
+    "t1": 72.0,
+    "title": "Follow AwareWolf",
+    "framing": "The final image dissolves in a gold-and-blue swirl into the AwareWolf logo card, exactly as the approved trailer ends.",
+    "action": "On screen: follow awarewolf · the AwareWolf logo · @aware._wolf_ · for the whole series.",
+    "speaker": "none",
+    "dialogue": "",
+    "delivery": "",
+    "sound": "The series motif resolves. One soft chain link under the logo.",
+    "stage": {
+     "chars": [
+      {
+       "id": "fool",
+       "x": 0.5,
+       "y": 0.72,
+       "face": 1,
+       "pose": "walk"
+      },
+      {
+       "id": "charioteer",
+       "x": 0.56,
+       "y": 0.72,
+       "face": 1,
+       "pose": "walk"
+      },
+      {
+       "id": "dog",
+       "x": 0.42,
+       "y": 0.74,
+       "face": 1,
+       "pose": "walk"
+      }
+     ],
+     "props": [],
+     "cam": {
+      "x": 0.5,
+      "y": 0.64,
+      "z": 1.8
+     },
+     "loc": "descent",
+     "time": "night"
+    },
+    "motion": {},
+    "endcard": true
    }
   ],
   "revision": 2,
@@ -10352,7 +10963,7 @@
    "planted: calm over force",
    "planted: the chain's slack"
   ],
-  "runtime": 60,
+  "runtime": 63,
   "shots": [
    {
     "id": "S01",
@@ -10839,6 +11450,37 @@
       "z": 3.0
      }
     }
+   },
+   {
+    "id": "S12",
+    "t0": 60.0,
+    "t1": 63.0,
+    "title": "Follow AwareWolf",
+    "framing": "The final image dissolves in a gold-and-blue swirl into the AwareWolf logo card, exactly as the approved trailer ends.",
+    "action": "On screen: follow awarewolf · the AwareWolf logo · @aware._wolf_ · for the whole series.",
+    "speaker": "none",
+    "dialogue": "",
+    "delivery": "",
+    "sound": "The series motif resolves. One soft chain link under the logo.",
+    "stage": {
+     "chars": [],
+     "props": [
+      {
+       "id": "chain",
+       "x": 0.5,
+       "y": 0.62
+      }
+     ],
+     "cam": {
+      "x": 0.5,
+      "y": 0.62,
+      "z": 3.0
+     },
+     "loc": "meadow",
+     "time": "day"
+    },
+    "motion": {},
+    "endcard": true
    }
   ],
   "revision": 2,
@@ -10893,7 +11535,7 @@
    "paid off: calm over force (E17)",
    "planted: the chain on his wrist loosens a little"
   ],
-  "runtime": 60,
+  "runtime": 63,
   "shots": [
    {
     "id": "S01",
@@ -11438,6 +12080,37 @@
       "z": 3.0
      }
     }
+   },
+   {
+    "id": "S13",
+    "t0": 60.0,
+    "t1": 63.0,
+    "title": "Follow AwareWolf",
+    "framing": "The final image dissolves in a gold-and-blue swirl into the AwareWolf logo card, exactly as the approved trailer ends.",
+    "action": "On screen: follow awarewolf · the AwareWolf logo · @aware._wolf_ · for the whole series.",
+    "speaker": "none",
+    "dialogue": "",
+    "delivery": "",
+    "sound": "The series motif resolves. One soft chain link under the logo.",
+    "stage": {
+     "chars": [],
+     "props": [
+      {
+       "id": "chain",
+       "x": 0.5,
+       "y": 0.62
+      }
+     ],
+     "cam": {
+      "x": 0.5,
+      "y": 0.62,
+      "z": 3.0
+     },
+     "loc": "meadow",
+     "time": "dusk"
+    },
+    "motion": {},
+    "endcard": true
    }
   ],
   "revision": 2,
@@ -11482,7 +12155,7 @@
    "paid off: the Magician, the Empress and her plant",
    "planted: the Traveler's true form"
   ],
-  "runtime": 76,
+  "runtime": 79,
   "shots": [
    {
     "id": "S01",
@@ -12094,6 +12767,39 @@
       "z": 3.0
      }
     }
+   },
+   {
+    "id": "S15",
+    "t0": 76.0,
+    "t1": 79.0,
+    "title": "Follow AwareWolf",
+    "framing": "The final image dissolves in a gold-and-blue swirl into the AwareWolf logo card, exactly as the approved trailer ends.",
+    "action": "On screen: follow awarewolf · the AwareWolf logo · @aware._wolf_ · for the whole series.",
+    "speaker": "none",
+    "dialogue": "",
+    "delivery": "",
+    "sound": "The series motif resolves. One soft chain link under the logo.",
+    "stage": {
+     "chars": [
+      {
+       "id": "traveler",
+       "x": 0.34,
+       "y": 0.72,
+       "face": 1,
+       "pose": "sit"
+      }
+     ],
+     "props": [],
+     "cam": {
+      "x": 0.34,
+      "y": 0.64,
+      "z": 2.8
+     },
+     "loc": "peak",
+     "time": "night"
+    },
+    "motion": {},
+    "endcard": true
    }
   ],
   "revision": 2,
@@ -12198,7 +12904,7 @@
    "paid off: trailer images of the Devil, the two chained figures and the Wheel",
    "planted: 'Ask me at the bridge' (Part Two)"
   ],
-  "runtime": 78,
+  "runtime": 81,
   "shots": [
    {
     "id": "S01",
@@ -12824,6 +13530,39 @@
       "z": 2.0
      }
     }
+   },
+   {
+    "id": "S14",
+    "t0": 78.0,
+    "t1": 81.0,
+    "title": "Follow AwareWolf",
+    "framing": "The final image dissolves in a gold-and-blue swirl into the AwareWolf logo card, exactly as the approved trailer ends.",
+    "action": "On screen: follow awarewolf · the AwareWolf logo · @aware._wolf_ · for the whole series.",
+    "speaker": "none",
+    "dialogue": "",
+    "delivery": "",
+    "sound": "The series motif resolves. One soft chain link under the logo.",
+    "stage": {
+     "chars": [
+      {
+       "id": "devil",
+       "x": 0.5,
+       "y": 0.58,
+       "face": 1,
+       "pose": "stand"
+      }
+     ],
+     "props": [],
+     "cam": {
+      "x": 0.5,
+      "y": 0.5,
+      "z": 1.8
+     },
+     "loc": "peak",
+     "time": "night"
+    },
+    "motion": {},
+    "endcard": true
    }
   ],
   "revision": 2,

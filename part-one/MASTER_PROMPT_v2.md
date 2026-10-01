@@ -54,14 +54,15 @@ Never quote, paraphrase or visually recreate The Dark Knight. Forbidden lines an
 </nolan_craft>
 
 <viral_standalone_rules>
-Every episode must pass all seven.
+Every episode must pass all eight.
 1. **Hook by 2 seconds.** Open on motion and conflict, with an on-screen line or a spoken question. Never open on a title card, a landscape establishing shot or a recap.
 2. **One clear want inside the episode,** understandable with no prior episodes.
 3. **One obstacle, one choice, one consequence,** all on screen.
 4. **A quotable closing line** of 8 words or fewer that stands alone as a caption.
 5. **A sting in the last 3 seconds:** a Devil glimpse, a reveal or a question that makes people rewatch or follow.
 6. **Find the XV:** hide one Devil sign in every episode (a shadow with horns, a chain link, a torch pointed down, the numeral XV scratched somewhere). This is the series' comment-section game.
-7. **Loopable ending:** the final frame should echo the first frame so the Reel plays back smoothly.
+7. **Echo ending:** the last story frame should echo the first frame.
+8. **End card on every episode:** after the last story shot, the final image dissolves in a gold-and-blue swirl into the AwareWolf logo card, exactly as the approved trailer ends: "follow awarewolf" · logo · @aware._wolf_ · "for the whole series." It runs 3 seconds and counts toward the 90-second limit, so the story itself runs at most 87 seconds. The system appends it automatically: do not write it as a shot.
 
 Retention checks: a new beat at least every 4 seconds; no hold over 1.5 seconds without motion, sound or information; subtitles carry every line; key action stays inside the 9:16 safe zone.
 </viral_standalone_rules>
