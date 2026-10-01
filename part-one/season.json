@@ -5,11 +5,11 @@
   "card": "0",
   "cardName": "The Fool",
   "title": "Before Dark",
-  "logline": "A young traveler promises his dog they'll cross a gorge before dark, and a smiling stranger offers a faster way if he leaves the dog behind.",
-  "hook": "A boot lands on a plank over a roaring gorge and the plank lurches. On-screen, in the Fool's voice: \"We'll be over before dark.\"",
-  "standalone": "A stranger sees a man choose to break a promise about time rather than a promise about loyalty, and a stranger who is not what he seems.",
-  "nolanDevice": "Ticking clock. The sun is sinking behind the ridge in every shot, so every second of hesitation is visible cost.",
-  "devilTest": "The Traveler offers a faster rope crossing downriver that only fits one. Leave the dog; it will find you.",
+  "logline": "A young traveler promises his dog they'll cross a gorge before dark, and a charming stranger offers a faster way, if he leaves the dog behind.",
+  "hook": "The trailer's opening image: the Fool on a cliff edge under a yellow sun. \"They call me the Fool. Because I believe I have infinite potential.\" Then a boot hits a plank and it lurches.",
+  "standalone": "A cocky young man who jokes about everything is made to choose between two promises, and we glimpse, for one second, the home he ran from.",
+  "nolanDevice": "Ticking clock. The sun sinks behind the ridge across the whole conversation, and every clever line costs daylight.",
+  "devilTest": "The Traveler offers a rope bridge that only takes one. Leave the dog; dogs always find their way. He frames it as keeping the Fool's promise.",
   "cost": "Time. He keeps the dog and loses the daylight.",
   "giftLearned": {
    "gift": "A promise kept to someone who can't ask for it",
@@ -20,8 +20,8 @@
    {
     "gift": "His own heart",
     "from": "E01",
-    "shot": "S07",
-    "howShown": "He kneels and puts his hand on the dog's head before he answers."
+    "shot": "S12",
+    "howShown": "He walks back, kneels and puts his hand on the dog's head before he answers."
    }
   ],
   "outcome": "win",
@@ -29,24 +29,70 @@
   "xv": "XV scratched into the empty rock (spotlighted once, in Episode 1, to teach the audience the game).",
   "threads": [
    "planted: the Traveler, his downward torch and chain bracelet",
+   "planted: 'Just one yes'",
    "planted: the Fool's promise to the dog",
-   "planted: the white rose in his hand",
-   "planted: the long uphill road",
-   "planted: 'Just one yes'"
+   "planted: 'People who stayed', the home he left (paid off E19)",
+   "paid off: trailer line 'They call me the Fool. Because I believe I have infinite potential.'",
+   "planted: the plank sliding downstream (loop)"
   ],
-  "runtime": 67,
+  "runtime": 84,
   "shots": [
    {
     "id": "S01",
     "t0": 0.0,
-    "t1": 3.0,
-    "title": "Before dark",
-    "framing": "Extreme low angle on the plank, boot entering frame, gorge roaring below; tilt up to his grin.",
-    "action": "His boot lands on the last surviving plank. It lurches toward the drop. He grins at the dog like this is fun.",
+    "t1": 6.0,
+    "title": "They call me the Fool",
+    "framing": "The trailer's opening image: wide side view, the Fool on a cliff edge, the drop ahead of him screen-right, the white dog at his heel on safe ground, a huge yellow sun. Slow push toward his face.",
+    "action": "He stands at the edge, chin up, staff and bundle on his shoulder, white rose in hand. He speaks to the whole world.",
     "speaker": "fool",
-    "dialogue": "We'll be over before dark.",
-    "delivery": "Breezy, to the dog, like a dare.",
-    "sound": "River roar. Wood creak under 'dark'.",
+    "dialogue": "They call me the Fool. Because I believe I have infinite potential.",
+    "delivery": "Bright, proud, half a joke and half a creed. Visible mouth.",
+    "sound": "Wind, one unresolved note, a paw scuff.",
+    "stage": {
+     "chars": [
+      {
+       "id": "fool",
+       "x": 0.46,
+       "y": 0.72,
+       "face": 1,
+       "pose": "stand"
+      },
+      {
+       "id": "dog",
+       "x": 0.38,
+       "y": 0.74,
+       "face": 1,
+       "pose": "stand"
+      }
+     ],
+     "props": [],
+     "cam": {
+      "x": 0.45,
+      "y": 0.58,
+      "z": 1.2
+     },
+     "loc": "gorge",
+     "time": "day"
+    },
+    "motion": {
+     "cam": {
+      "x": 0.45,
+      "y": 0.62,
+      "z": 1.6
+     }
+    }
+   },
+   {
+    "id": "S02",
+    "t0": 6.0,
+    "t1": 9.5,
+    "title": "Promise",
+    "framing": "Extreme low angle on the plank, boot entering frame, gorge roaring below; tilt up to his grin.",
+    "action": "His boot lands on the last surviving plank. It lurches toward the drop. He grins at the dog like this is a game.",
+    "speaker": "fool",
+    "dialogue": "We'll be over before dark. Promise.",
+    "delivery": "Breezy, to the dog, like a dare he's already won.",
+    "sound": "River roar. Wood creak under 'Promise'.",
     "stage": {
      "chars": [
       {
@@ -77,7 +123,7 @@
       "z": 2.6
      },
      "loc": "gorge",
-     "time": "dusk"
+     "time": "day"
     },
     "motion": {
      "cam": {
@@ -88,16 +134,16 @@
     }
    },
    {
-    "id": "S02",
-    "t0": 3.0,
-    "t1": 8.0,
-    "title": "Infinite potential",
-    "framing": "Whip pullback as he jumps back to the rock; dog in foreground.",
-    "action": "The plank tips; he leaps back and lands badly on the rock. The dog barks once. He brushes himself off with a showman's bow.",
+    "id": "S03",
+    "t0": 9.5,
+    "t1": 13.0,
+    "title": "A test plank",
+    "framing": "Whip pullback as he leaps back to the rock; dog in the foreground.",
+    "action": "The plank tips. He leaps back and lands badly on the rock. The dog barks once. He brushes himself off with a showman's bow, too quickly.",
     "speaker": "fool",
-    "dialogue": "I'm fine. Infinite potential, remember?",
-    "delivery": "Out of breath, pretending it was planned.",
-    "sound": "One sharp bark. Plank knocking below.",
+    "dialogue": "I'm fine. That was a test plank.",
+    "delivery": "Out of breath, performing calm.",
+    "sound": "One sharp bark. The plank knocking below.",
     "stage": {
      "chars": [
       {
@@ -128,7 +174,7 @@
       "z": 1.8
      },
      "loc": "gorge",
-     "time": "dusk"
+     "time": "day"
     },
     "motion": {
      "cam": {
@@ -148,16 +194,16 @@
     }
    },
    {
-    "id": "S03",
-    "t0": 8.0,
-    "t1": 11.0,
-    "title": "The sun has a vote",
-    "framing": "Wide. The sun touching the ridge. Three routes readable: plank, uphill road, river bend.",
-    "action": "He looks from the broken plank to the long uphill road to the sun. The grin fades. Card label over his face: 0 · THE FOOL.",
-    "speaker": "none",
-    "dialogue": "",
-    "delivery": "",
-    "sound": "A low tick in the music begins. It will not stop until S09.",
+    "id": "S04",
+    "t0": 13.0,
+    "t1": 16.5,
+    "title": "The long way",
+    "framing": "Wide. The sun touching the ridge. Plank, uphill road and river bend all readable. Card label fades in: 0 · THE FOOL.",
+    "action": "He looks from the plank to the long uphill road to the sun. The grin fades a little.",
+    "speaker": "fool",
+    "dialogue": "The long way round takes all day.",
+    "delivery": "Quiet. The first honest sentence, said to the dog.",
+    "sound": "A low tick enters the music. It won't stop until S14.",
     "stage": {
      "chars": [
       {
@@ -188,7 +234,7 @@
       "z": 1.0
      },
      "loc": "gorge",
-     "time": "dusk"
+     "time": "day"
     },
     "motion": {
      "cam": {
@@ -199,16 +245,16 @@
     }
    },
    {
-    "id": "S04",
-    "t0": 11.0,
-    "t1": 18.0,
+    "id": "S05",
+    "t0": 16.5,
+    "t1": 21.5,
     "title": "Already there",
     "framing": "Slow push past the Fool's shoulder to a rock that was empty a second ago.",
-    "action": "He turns and finds the Traveler already seated on a flat rock, hood up, torch pointed at the ground, chain wrapped around his wrist like jewelry. The dog backs into the Fool's boot.",
+    "action": "He turns. The Traveler is sitting on a flat rock, hood up, torch pointed at the ground, a loose chain wrapped around his wrist like jewelry. The dog backs into the Fool's boot.",
     "speaker": "traveler",
-    "dialogue": "There's a faster crossing. Rope bridge, round the bend.",
-    "delivery": "Friendly, unhurried, like he's doing a favor.",
-    "sound": "River drops out. One chain link clinks as he gestures.",
+    "dialogue": "There's a faster way. A rope bridge, round the bend.",
+    "delivery": "Friendly, unhurried, like he's doing a favor for a neighbor.",
+    "sound": "The river drops out. One chain link clinks as he gestures.",
     "stage": {
      "chars": [
       {
@@ -246,7 +292,7 @@
       "z": 1.7
      },
      "loc": "gorge",
-     "time": "dusk"
+     "time": "day"
     },
     "motion": {
      "cam": {
@@ -257,16 +303,213 @@
     }
    },
    {
-    "id": "S05",
-    "t0": 18.0,
-    "t1": 24.0,
-    "title": "Dogs don't fit",
-    "framing": "Clean two-shot, the Traveler lit from below by his torch.",
-    "action": "The Traveler tilts his head at the dog. The Fool's hand drifts toward the dog, then stops halfway.",
+    "id": "S06",
+    "t0": 21.5,
+    "t1": 25.5,
+    "title": "Interesting ones",
+    "framing": "Two-shot. The Fool recovers his swagger.",
+    "action": "The Fool points at him, half laughing, half spooked.",
+    "speaker": "fool",
+    "dialogue": "You always sit on rocks waiting for people?",
+    "delivery": "Covering the fright with a joke.",
+    "sound": "Torch crackle.",
+    "stage": {
+     "chars": [
+      {
+       "id": "fool",
+       "x": 0.42,
+       "y": 0.72,
+       "face": 1,
+       "pose": "point"
+      },
+      {
+       "id": "traveler",
+       "x": 0.64,
+       "y": 0.72,
+       "face": -1,
+       "pose": "sit"
+      }
+     ],
+     "props": [],
+     "cam": {
+      "x": 0.52,
+      "y": 0.64,
+      "z": 1.9
+     },
+     "loc": "gorge",
+     "time": "day"
+    },
+    "motion": {
+     "cam": {
+      "x": 0.52,
+      "y": 0.64,
+      "z": 2.0
+     }
+    }
+   },
+   {
+    "id": "S07",
+    "t0": 25.5,
+    "t1": 30.5,
+    "title": "Only the interesting ones",
+    "framing": "Tight on the Traveler, lit from below by his own torch.",
+    "action": "He tilts his head, enjoying himself.",
     "speaker": "traveler",
-    "dialogue": "One at a time. Dogs don't fit.",
-    "delivery": "Regretful, a shrug in the voice.",
-    "sound": "Ticking under the music, faster.",
+    "dialogue": "Only the interesting ones. The Fool. Infinite potential, wasn't it?",
+    "delivery": "Amused. He was listening the whole time.",
+    "sound": "Chain clink.",
+    "stage": {
+     "chars": [
+      {
+       "id": "traveler",
+       "x": 0.64,
+       "y": 0.72,
+       "face": -1,
+       "pose": "sit"
+      }
+     ],
+     "props": [],
+     "cam": {
+      "x": 0.64,
+      "y": 0.64,
+      "z": 2.5
+     },
+     "loc": "gorge",
+     "time": "day"
+    },
+    "motion": {
+     "cam": {
+      "x": 0.64,
+      "y": 0.64,
+      "z": 2.7
+     }
+    }
+   },
+   {
+    "id": "S08",
+    "t0": 30.5,
+    "t1": 33.0,
+    "title": "You've heard of me",
+    "framing": "The Fool, unsettled for a second, then preening.",
+    "action": "He straightens, flattered and a little spooked.",
+    "speaker": "fool",
+    "dialogue": "You've heard of me.",
+    "delivery": "Pleased with himself. Too pleased.",
+    "sound": "",
+    "stage": {
+     "chars": [
+      {
+       "id": "fool",
+       "x": 0.42,
+       "y": 0.72,
+       "face": 1,
+       "pose": "stand"
+      }
+     ],
+     "props": [],
+     "cam": {
+      "x": 0.44,
+      "y": 0.64,
+      "z": 2.4
+     },
+     "loc": "gorge",
+     "time": "day"
+    },
+    "motion": {
+     "cam": {
+      "x": 0.44,
+      "y": 0.64,
+      "z": 2.5
+     }
+    }
+   },
+   {
+    "id": "S09",
+    "t0": 33.0,
+    "t1": 35.5,
+    "title": "Who calls you that?",
+    "framing": "Hold on the Fool as the question lands. His grin stays one beat too long, then slips.",
+    "action": "The Traveler asks it softly. The Fool's smile slips. He looks at the gorge, not at the man.",
+    "speaker": "traveler",
+    "dialogue": "Who calls you that?",
+    "delivery": "Soft. Curious. A scalpel.",
+    "sound": "The music stops. Only the river.",
+    "stage": {
+     "chars": [
+      {
+       "id": "fool",
+       "x": 0.42,
+       "y": 0.72,
+       "face": 1,
+       "pose": "stand"
+      }
+     ],
+     "props": [],
+     "cam": {
+      "x": 0.42,
+      "y": 0.64,
+      "z": 2.6
+     },
+     "loc": "gorge",
+     "time": "day"
+    },
+    "motion": {
+     "cam": {
+      "x": 0.42,
+      "y": 0.64,
+      "z": 2.9
+     }
+    }
+   },
+   {
+    "id": "S10",
+    "t0": 35.5,
+    "t1": 38.5,
+    "title": "People who stayed",
+    "framing": "Close on the Fool. The first crack in the act.",
+    "action": "He shrugs, too lightly.",
+    "speaker": "fool",
+    "dialogue": "People who stayed.",
+    "delivery": "Flat. He didn't mean to say it.",
+    "sound": "Wind. One heartbeat of silence after the line.",
+    "stage": {
+     "chars": [
+      {
+       "id": "fool",
+       "x": 0.42,
+       "y": 0.72,
+       "face": 1,
+       "pose": "stand"
+      }
+     ],
+     "props": [],
+     "cam": {
+      "x": 0.42,
+      "y": 0.64,
+      "z": 2.9
+     },
+     "loc": "gorge",
+     "time": "day"
+    },
+    "motion": {
+     "cam": {
+      "x": 0.42,
+      "y": 0.64,
+      "z": 3.0
+     }
+    }
+   },
+   {
+    "id": "S11",
+    "t0": 38.5,
+    "t1": 44.0,
+    "title": "Dogs don't fit",
+    "framing": "The Traveler stands for the first time; his eyes go to the dog.",
+    "action": "He rises and brushes off his cloak. He nods down at the dog without looking at it directly.",
+    "speaker": "traveler",
+    "dialogue": "Then you'll love my bridge. It takes one. Dogs don't fit.",
+    "delivery": "Regretful. A shrug in the voice.",
+    "sound": "The tick returns, faster.",
     "stage": {
      "chars": [
       {
@@ -288,37 +531,134 @@
        "x": 0.64,
        "y": 0.72,
        "face": -1,
-       "pose": "sit"
+       "pose": "stand"
       }
      ],
      "props": [],
      "cam": {
       "x": 0.52,
       "y": 0.64,
-      "z": 2.1
+      "z": 1.8
      },
      "loc": "gorge",
-     "time": "dusk"
+     "time": "day"
     },
     "motion": {
      "cam": {
-      "x": 0.5,
+      "x": 0.52,
       "y": 0.64,
+      "z": 2.0
+     }
+    }
+   },
+   {
+    "id": "S12",
+    "t0": 44.0,
+    "t1": 47.5,
+    "title": "Mostly fur",
+    "framing": "The Fool scoops a hand toward the dog, pleading like a salesman.",
+    "action": "He gestures at the dog as if presenting evidence in court.",
+    "speaker": "fool",
+    "dialogue": "He's small. He's mostly fur.",
+    "delivery": "Comic, quick, a little desperate.",
+    "sound": "The dog's tail thumps once.",
+    "stage": {
+     "chars": [
+      {
+       "id": "fool",
+       "x": 0.42,
+       "y": 0.72,
+       "face": 1,
+       "pose": "reach"
+      },
+      {
+       "id": "dog",
+       "x": 0.34,
+       "y": 0.74,
+       "face": 1,
+       "pose": "sit"
+      }
+     ],
+     "props": [],
+     "cam": {
+      "x": 0.4,
+      "y": 0.68,
+      "z": 2.2
+     },
+     "loc": "gorge",
+     "time": "day"
+    },
+    "motion": {
+     "cam": {
+      "x": 0.4,
+      "y": 0.68,
       "z": 2.3
      }
     }
    },
    {
-    "id": "S06",
-    "t0": 24.0,
-    "t1": 31.0,
+    "id": "S13",
+    "t0": 47.5,
+    "t1": 55.5,
     "title": "They always do",
-    "framing": "Over the Traveler's shoulder onto the Fool; the sun half gone behind him.",
-    "action": "The Fool looks at the bend, then the sun. He takes one step toward the rope bridge. The dog does not follow. It sits.",
+    "framing": "Over the Traveler's shoulder onto the Fool; the sun half gone behind them.",
+    "action": "The Traveler steps closer, warm and reasonable. The Fool looks at the bend, then the sun.",
     "speaker": "traveler",
-    "dialogue": "Leave him. He'll find you. They always do.",
-    "delivery": "Warm, reasonable, almost kind.",
-    "sound": "Wind. The tick becomes a pulse.",
+    "dialogue": "Leave him. Dogs find their way. You'll be across before dark, like you promised. That's keeping your word.",
+    "delivery": "Warm, patient, almost kind. He turns the Fool's promise into the bait.",
+    "sound": "Ticking under the music. A chain link on 'word'.",
+    "stage": {
+     "chars": [
+      {
+       "id": "fool",
+       "x": 0.46,
+       "y": 0.72,
+       "face": 1,
+       "pose": "stand"
+      },
+      {
+       "id": "dog",
+       "x": 0.34,
+       "y": 0.74,
+       "face": 1,
+       "pose": "sit"
+      },
+      {
+       "id": "traveler",
+       "x": 0.6,
+       "y": 0.72,
+       "face": -1,
+       "pose": "stand"
+      }
+     ],
+     "props": [],
+     "cam": {
+      "x": 0.5,
+      "y": 0.62,
+      "z": 1.6
+     },
+     "loc": "gorge",
+     "time": "day"
+    },
+    "motion": {
+     "cam": {
+      "x": 0.5,
+      "y": 0.62,
+      "z": 1.75
+     }
+    }
+   },
+   {
+    "id": "S14",
+    "t0": 55.5,
+    "t1": 59.5,
+    "title": "One step",
+    "framing": "Wide. The Fool takes a step toward the bend. The dog does not follow. It sits in the last of the light.",
+    "action": "He walks three steps toward the rope bridge, talking himself into it. The dog stays where it is.",
+    "speaker": "fool",
+    "dialogue": "He'd find me. Right? They always do.",
+    "delivery": "Half to himself. Trying the Traveler's words on.",
+    "sound": "The tick becomes a pulse. Then the pulse stops.",
     "stage": {
      "chars": [
       {
@@ -337,31 +677,31 @@
       },
       {
        "id": "traveler",
-       "x": 0.64,
+       "x": 0.62,
        "y": 0.72,
        "face": -1,
-       "pose": "sit"
+       "pose": "stand"
       }
      ],
      "props": [],
      "cam": {
       "x": 0.5,
       "y": 0.62,
-      "z": 1.6
+      "z": 1.4
      },
      "loc": "gorge",
-     "time": "dusk"
+     "time": "day"
     },
     "motion": {
      "cam": {
       "x": 0.5,
       "y": 0.62,
-      "z": 1.7
+      "z": 1.5
      },
      "chars": [
       {
        "id": "fool",
-       "x": 0.56,
+       "x": 0.58,
        "y": 0.72,
        "face": 1,
        "pose": "stand"
@@ -370,15 +710,15 @@
     }
    },
    {
-    "id": "S07",
-    "t0": 31.0,
-    "t1": 39.0,
-    "title": "We",
-    "framing": "Low angle on the Fool's face as he looks back; then down to the dog.",
-    "action": "He stops, looks back at the dog sitting alone in the last light. He walks back and kneels, his hand on the dog's head.",
+    "id": "S15",
+    "t0": 59.5,
+    "t1": 65.5,
+    "title": "I said we",
+    "framing": "Low angle on the Fool's face as he turns back; then down to the dog as he kneels and puts his hand on its head.",
+    "action": "He looks back at the dog sitting alone. He walks back and kneels, his hand on the dog's head.",
     "speaker": "fool",
-    "dialogue": "I said 'we'.",
-    "delivery": "Quiet. Not to the Traveler. To himself.",
+    "dialogue": "I didn't say 'I'll be over before dark.' I said 'we'.",
+    "delivery": "Quiet. Not to the Traveler. To the dog, and to himself.",
     "sound": "Music drops to one held note.",
     "stage": {
      "chars": [
@@ -399,12 +739,12 @@
      ],
      "props": [],
      "cam": {
-      "x": 0.42,
+      "x": 0.4,
       "y": 0.66,
       "z": 2.2
      },
      "loc": "gorge",
-     "time": "dusk"
+     "time": "day"
     },
     "motion": {
      "cam": {
@@ -415,59 +755,59 @@
     }
    },
    {
-    "id": "S08",
-    "t0": 39.0,
-    "t1": 45.0,
-    "title": "You also said before dark",
-    "framing": "Tight on the Traveler, who has not moved at all.",
-    "action": "The Traveler smiles, delighted, as if the Fool has solved a riddle wrong.",
+    "id": "S16",
+    "t0": 65.5,
+    "t1": 71.0,
+    "title": "Which promise?",
+    "framing": "Tight on the Traveler, who hasn't moved. He's delighted, as if the Fool had solved a riddle the wrong way.",
+    "action": "He smiles and lets the question hang.",
     "speaker": "traveler",
-    "dialogue": "You also said 'before dark'.",
-    "delivery": "Soft. Precise. Lets it sting.",
+    "dialogue": "You also said 'before dark'. So which one was the lie?",
+    "delivery": "Soft. Precise. He lets it sting.",
     "sound": "Silence except the river.",
     "stage": {
      "chars": [
       {
        "id": "traveler",
-       "x": 0.64,
+       "x": 0.62,
        "y": 0.72,
        "face": -1,
-       "pose": "sit"
+       "pose": "stand"
       }
      ],
      "props": [
       {
        "id": "torch",
-       "x": 0.69,
-       "y": 0.7
+       "x": 0.67,
+       "y": 0.68
       }
      ],
      "cam": {
-      "x": 0.64,
+      "x": 0.62,
       "y": 0.64,
       "z": 2.6
      },
      "loc": "gorge",
-     "time": "dusk"
+     "time": "day"
     },
     "motion": {
      "cam": {
-      "x": 0.64,
+      "x": 0.62,
       "y": 0.63,
       "z": 2.8
      }
     }
    },
    {
-    "id": "S09",
-    "t0": 45.0,
-    "t1": 54.0,
+    "id": "S17",
+    "t0": 71.0,
+    "t1": 75.5,
     "title": "Then I'll be late",
-    "framing": "Wide as the Fool stands and turns to the uphill road; the sun disappears behind the ridge on his last word.",
-    "action": "He stands, shoulders the bundle, lifts the white rose like a salute to the Traveler, and starts up the long road. The dog trots after him. The sun is gone.",
+    "framing": "Wide as the Fool stands and turns to the uphill road. The sun vanishes behind the ridge on his last word.",
+    "action": "He stands, shoulders the bundle, and lifts the white rose to the Traveler like a salute. Then he starts up the long road. The dog trots after him. The sun is gone.",
     "speaker": "fool",
-    "dialogue": "Then I'll be late.",
-    "delivery": "Light again, grinning. Chosen.",
+    "dialogue": "Neither. I'll just be late.",
+    "delivery": "Light again, grinning. Chosen, not cornered. A salute with the rose.",
     "sound": "The ticking stops dead. A warm phrase of music.",
     "stage": {
      "chars": [
@@ -490,7 +830,7 @@
        "x": 0.64,
        "y": 0.72,
        "face": -1,
-       "pose": "sit"
+       "pose": "stand"
       }
      ],
      "props": [],
@@ -500,7 +840,7 @@
       "z": 1.2
      },
      "loc": "gorge",
-     "time": "dusk"
+     "time": "day"
     },
     "motion": {
      "cam": {
@@ -527,16 +867,16 @@
     }
    },
    {
-    "id": "S10",
-    "t0": 54.0,
-    "t1": 61.0,
+    "id": "S18",
+    "t0": 75.5,
+    "t1": 80.0,
     "title": "Late is how it starts",
     "framing": "Hold on the Traveler in the blue dark, his torch the only warm light.",
-    "action": "The Traveler watches them go. His torch flares once, pointing down.",
+    "action": "He watches them climb. His torch flares once, pointing down.",
     "speaker": "traveler",
-    "dialogue": "Late is how it starts. Then, just one yes.",
-    "delivery": "To himself. Amused. Patient. The first time we hear his ask.",
-    "sound": "Chain link clinks. Low drone rises.",
+    "dialogue": "Late is how it starts. Then... just one yes.",
+    "delivery": "To himself. Amused. Endlessly patient.",
+    "sound": "Chain link. A low drone rises.",
     "stage": {
      "chars": [
       {
@@ -544,7 +884,7 @@
        "x": 0.64,
        "y": 0.72,
        "face": -1,
-       "pose": "sit"
+       "pose": "stand"
       }
      ],
      "props": [
@@ -560,7 +900,7 @@
       "z": 2.0
      },
      "loc": "gorge",
-     "time": "dusk"
+     "time": "day"
     },
     "motion": {
      "cam": {
@@ -571,16 +911,16 @@
     }
    },
    {
-    "id": "S11",
-    "t0": 61.0,
-    "t1": 67.0,
+    "id": "S19",
+    "t0": 80.0,
+    "t1": 84.5,
     "title": "Late. But together.",
-    "framing": "On the uphill road, the Fool looks back; reverse to the empty rock.",
-    "action": "He glances back. The rock is empty. Scratched into it: XV. The dog growls at it. They keep walking. Below, the plank breaks free and slides downstream, the same plank from the first frame.",
+    "framing": "On the uphill road, the Fool looks back; reverse to the empty rock; then the river.",
+    "action": "He glances back. The rock is empty. Scratched into it: XV. The dog growls at it. The Fool ruffles its ears and keeps climbing. Below, the plank breaks free and slides downstream, the same plank from the first frame.",
     "speaker": "fool",
     "dialogue": "Late. But together.",
-    "delivery": "Tired, warm, to the dog.",
-    "sound": "Growl. Wind. The plank breaks free and slides downstream.",
+    "delivery": "Tired, warm, to the dog. He means it.",
+    "sound": "A growl. Wind. The plank knocking away downstream.",
     "stage": {
      "chars": [],
      "props": [
@@ -619,7 +959,7 @@
     }
    }
   ],
-  "revision": 2,
+  "revision": 3,
   "costRung": 1,
   "gl": "promise",
   "gu": [

@@ -162,7 +162,12 @@ Subtext only. Never name these ideas in dialogue.
 - 8 to 14 shots per episode (short shots are fine; a new beat every 4 seconds matters more than shot count). Timings are continuous and sum to 60 to 90 seconds.
 - Each shot: one observable action, an emotional change, a clear eyeline and camera intent. Name who owns the visible mouth for every spoken line.
 - Keep fixed screen direction inside a location. The trailer places the river on the Fool's right and the dog on his left at the crossing; hold that.
-- Dialogue: 6 to 14 lines per episode, subtitle-length (12 words or fewer per line where possible). Write a delivery note for every line (for example: "quiet, amused, never blinks").
+- Dialogue is where the emotion moves. 14 to 20 lines and roughly 130 to 170 words per episode, at a speaking pace of about 2.6 words per second; leave room for silent action.
+- Every episode has at least one real exchange of four or more lines where someone changes their mind, gets caught, or reveals something. One-line ping-pong is not enough.
+- The Fool's voice has an arc inside each episode: he opens performing (jokes, bravado, "maybe"), the act cracks once (a short, unguarded line he didn't mean to say), and he ends choosing in plain words.
+- His backstory is revealed only in cracks, never explained: he left a home of "people who stayed" (E01), a father who fixed the same roof for thirty years (E03), and a goodbye he never said (E19).
+- The Devil gets the longest speeches (up to about 25 words), and he builds them from the Fool's own words. Mentors each have their own texture: the Magician teases and calls him "Feather", the Priestess barely speaks, the Empress is warm and blunt, the Emperor gives orders, the Hierophant asks questions, the Charioteer shouts, Strength is calm, and the Hermit asks one-word questions.
+- Write a delivery note for every line (for example: "quiet, amused, never blinks").
 - No narrator unless an episode explicitly needs one. None is expected in Episodes 1 to 20.
 - On-screen card label ("0 · THE FOOL") appears only after the hook, never as the first frame.
 - Violence stays implied. No gore, no invented victims, and the dog is never harmed.
