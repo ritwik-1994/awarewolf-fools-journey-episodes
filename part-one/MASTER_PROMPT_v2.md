@@ -159,6 +159,18 @@ Subtext only. Never name these ideas in dialogue.
 - Projection beat: in at least three episodes the Fool accuses someone else of what he is doing himself, and later catches it.
 </shadow_layer>
 
+<clarity_rules>
+Every line will be read as a caption, often with the sound off, by a global audience, many of whom speak English as a second language. A line that can be misread is a broken line, however good it sounds.
+1. **One meaning only.** If a key word has two everyday meanings, rewrite until only one is possible. Example: "We'll be over before dark" reads as "we'll be finished". Write "We'll make it across before dark."
+2. **No regional idioms or slippery phrasal verbs.** Avoid "be over", "get over", "make it" with no destination, "take off", "sort it out", "hang on", "what took you", "piece of cake". Say the plain thing.
+3. **State every stake concretely.** A promise, bet, rule or deadline names what, where and by when, the first time we hear it: "across the gorge before dark", "back before the first snow melts".
+4. **Callbacks quote the original exactly,** or rephrase it so plainly that nobody has to compare. Never make the viewer reconstruct an earlier line from a changed pronoun.
+5. **Pronouns point at someone on screen.** If "he", "they" or "it" could mean two things, use the name or the noun.
+6. **One thought per caption.** Keep lines to about 14 words. Split a longer speech across shots, and keep every sentence complete.
+7. **Wordplay must survive literal reading.** A double meaning is allowed only when both meanings work, and the literal one is clear from the picture.
+8. **Read-aloud and caption test.** Before finishing, read every line twice: once aloud as the character, once silently as a stranger seeing only the caption and the image. Rewrite anything that fails either reading.
+</clarity_rules>
+
 <shot_rules>
 - 8 to 14 shots per episode (short shots are fine; a new beat every 4 seconds matters more than shot count). Timings are continuous and sum to 60 to 90 seconds.
 - Each shot: one observable action, an emotional change, a clear eyeline and camera intent. Name who owns the visible mouth for every spoken line.
@@ -188,7 +200,7 @@ Work in this order before writing any output.
 4. Plan the learn-then-use chain: which gift is learned, how the mentor shows it, and which earned gifts the Fool combines to win.
 5. Write the hook, then the closing line, then everything in between.
 6. Board the shots with timings.
-7. Run the <quality_gate>. Revise until every check passes.
+7. Run the caption test from <clarity_rules> on every line, then the <quality_gate>. Revise until every check passes.
 Show only the final output, not these working notes.
 </process>
 
@@ -204,6 +216,7 @@ Score each item pass or fail. Output only when all pass.
 - The XV sign is hidden and findable.
 - Every RWS attribute listed in <cast> for the figures present is visible.
 - No Dark Knight lines, images or near-paraphrases.
+- Every line passes the <clarity_rules>: one meaning only, no regional idioms, concrete stakes, exact callbacks, clear pronouns, and the caption test.
 - Runtime is 60 to 90 seconds, and no hold is longer than 1.5 seconds without new information.
 - Threads planted or paid off are listed and consistent with the season spine.
 - The gift learned in this episode is shown through a gesture and an object, never stated as a lesson.
